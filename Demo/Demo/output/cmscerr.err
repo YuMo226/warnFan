@@ -1,0 +1,37 @@
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第98行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第99行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第100行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第101行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第102行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第103行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第98行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第99行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第100行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第101行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第102行	initializer in extern declaration
+Warning[339]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.h	第103行	initializer in extern declaration
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第31行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第32行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第33行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第34行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第35行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第36行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第37行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第38行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第39行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第40行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第41行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第42行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第43行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第44行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第45行	conversion to shorter data type
+Warning[752]:	D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c	第46行	conversion to shorter data type
+
+Memory Summary:
+    Program space        used   1ACh (   428) of  2000h words   (  5.2%)
+    Data space           used    13h (    19) of    F0h bytes   (  7.9%)
+    EEPROM space         None available
+    Data stack space     used     0h (     0) of    50h bytes   (  0.0%)
+    Configuration bits   used     0h (     0) of     2h words   (  0.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+

@@ -1,0 +1,42 @@
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Task.c	第83行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c	第44行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c	第45行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c	第52行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c	第55行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c	第65行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\ptc_driver.c	第62行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第84行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第85行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第90行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第92行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第130行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第131行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第132行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第133行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第134行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第135行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第136行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第138行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第139行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第140行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第141行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第142行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第143行	implicit signed to unsigned conversion
+Warning[373]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c	第144行	implicit signed to unsigned conversion
+Advisory[1510]	non-reentrant function "_SetPin" appears in multiple call graphs and has been duplicated by the compiler
+Warning[520]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\ptc_driver.c	第6行	function "_DelayMs" is never called
+Warning[520]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\ptc_driver.c	第65行	function "_PTC_SoftStart" is never called
+Warning[1090]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Touch_Kscan_Library.h	第115行	variable "_FactorRawDat" is not used
+Warning[1090]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Touch_Kscan_Library.h	第114行	variable "_NoiseDat" is not used
+Warning[1090]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Touch_Kscan_Library.h	第113行	variable "_Disp_KeyDown" is not used
+Warning[1090]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Key.c	第7行	variable "_touchFlag" is not used
+Warning[1393]:	D:\Homework\laptop\Homework\嵌入式\warmFan_finish\main.c	第37行	possible hardware stack overflow detected; estimated stack depth: 9
+
+Memory Summary:
+    Program space        used   A14h (  2580) of  2000h words   ( 31.5%)
+    Data space           used    50h (    80) of    F0h bytes   ( 33.3%)
+    EEPROM space         None available
+    Data stack space     used     0h (     0) of    50h bytes   (  0.0%)
+    Configuration bits   used     0h (     0) of     2h words   (  0.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+

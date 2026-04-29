@@ -1,0 +1,1 @@
+ ptc_driver.d  ptc_driver.p1:  D:/Homework/laptop/Homework/嵌入式/warmFan_finish/ptc_driver.c D:/Homework/laptop/Homework/嵌入式/warmFan_finish/ptc_driver.h

@@ -1,0 +1,1305 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+"15 C:\CMS_IDE_V2.03.21\data\include\cms79f726.h
+[v _INDF `Vuc ~T0 @X0 1 e@0 ]
+[; ;cms79f726.h: 15: volatile unsigned char INDF @ 0x0000;
+"16
+[v _TMR0 `Vuc ~T0 @X0 1 e@1 ]
+[; ;cms79f726.h: 16: volatile unsigned char TMR0 @ 0x0001;
+"17
+[v _PCL `Vuc ~T0 @X0 1 e@2 ]
+[; ;cms79f726.h: 17: volatile unsigned char PCL @ 0x0002;
+"18
+[v _STATUS `Vuc ~T0 @X0 1 e@3 ]
+[; ;cms79f726.h: 18: volatile unsigned char STATUS @ 0x0003;
+"19
+[v _FSR `Vuc ~T0 @X0 1 e@4 ]
+[; ;cms79f726.h: 19: volatile unsigned char FSR @ 0x0004;
+"20
+[v _PORTA `Vuc ~T0 @X0 1 e@5 ]
+[; ;cms79f726.h: 20: volatile unsigned char PORTA @ 0x0005;
+"21
+[v _PORTB `Vuc ~T0 @X0 1 e@6 ]
+[; ;cms79f726.h: 21: volatile unsigned char PORTB @ 0x0006;
+"22
+[v _PORTC `Vuc ~T0 @X0 1 e@7 ]
+[; ;cms79f726.h: 22: volatile unsigned char PORTC @ 0x0007;
+"23
+[v _ANSEL0 `Vuc ~T0 @X0 1 e@9 ]
+[; ;cms79f726.h: 23: volatile unsigned char ANSEL0 @ 0x0009;
+"24
+[v _PCLATH `Vuc ~T0 @X0 1 e@10 ]
+[; ;cms79f726.h: 24: volatile unsigned char PCLATH @ 0x000A;
+"25
+[v _INTCON `Vuc ~T0 @X0 1 e@11 ]
+[; ;cms79f726.h: 25: volatile unsigned char INTCON @ 0x000B;
+"26
+[v _PIR1 `Vuc ~T0 @X0 1 e@12 ]
+[; ;cms79f726.h: 26: volatile unsigned char PIR1 @ 0x000C;
+"27
+[v _PIR2 `Vuc ~T0 @X0 1 e@13 ]
+[; ;cms79f726.h: 27: volatile unsigned char PIR2 @ 0x000D;
+"28
+[v _TMR1L `Vuc ~T0 @X0 1 e@14 ]
+[; ;cms79f726.h: 28: volatile unsigned char TMR1L @ 0x000E;
+"29
+[v _TMR1H `Vuc ~T0 @X0 1 e@15 ]
+[; ;cms79f726.h: 29: volatile unsigned char TMR1H @ 0x000F;
+"30
+[v _T1CON `Vuc ~T0 @X0 1 e@16 ]
+[; ;cms79f726.h: 30: volatile unsigned char T1CON @ 0x0010;
+"31
+[v _TMR2 `Vuc ~T0 @X0 1 e@17 ]
+[; ;cms79f726.h: 31: volatile unsigned char TMR2 @ 0x0011;
+"32
+[v _T2CON `Vuc ~T0 @X0 1 e@18 ]
+[; ;cms79f726.h: 32: volatile unsigned char T2CON @ 0x0012;
+"33
+[v _CCPR1L `Vuc ~T0 @X0 1 e@21 ]
+[; ;cms79f726.h: 33: volatile unsigned char CCPR1L @ 0x0015;
+"34
+[v _CCPR1H `Vuc ~T0 @X0 1 e@22 ]
+[; ;cms79f726.h: 34: volatile unsigned char CCPR1H @ 0x0016;
+"35
+[v _CCP1CON `Vuc ~T0 @X0 1 e@23 ]
+[; ;cms79f726.h: 35: volatile unsigned char CCP1CON @ 0x0017;
+"36
+[v _RCSTA `Vuc ~T0 @X0 1 e@24 ]
+[; ;cms79f726.h: 36: volatile unsigned char RCSTA @ 0x0018;
+"37
+[v _TXREG `Vuc ~T0 @X0 1 e@25 ]
+[; ;cms79f726.h: 37: volatile unsigned char TXREG @ 0x0019;
+"38
+[v _RCREG `Vuc ~T0 @X0 1 e@26 ]
+[; ;cms79f726.h: 38: volatile unsigned char RCREG @ 0x001A;
+"39
+[v _CCPR2L `Vuc ~T0 @X0 1 e@27 ]
+[; ;cms79f726.h: 39: volatile unsigned char CCPR2L @ 0x001B;
+"40
+[v _CCPR2H `Vuc ~T0 @X0 1 e@28 ]
+[; ;cms79f726.h: 40: volatile unsigned char CCPR2H @ 0x001C;
+"41
+[v _CCP2CON `Vuc ~T0 @X0 1 e@29 ]
+[; ;cms79f726.h: 41: volatile unsigned char CCP2CON @ 0x001D;
+"42
+[v _TXSTA `Vuc ~T0 @X0 1 e@30 ]
+[; ;cms79f726.h: 42: volatile unsigned char TXSTA @ 0x001E;
+"43
+[v _SPBRG `Vuc ~T0 @X0 1 e@31 ]
+[; ;cms79f726.h: 43: volatile unsigned char SPBRG @ 0x001F;
+"44
+[v _OPTION_REG `Vuc ~T0 @X0 1 e@129 ]
+[; ;cms79f726.h: 44: volatile unsigned char OPTION_REG @ 0x0081;
+"45
+[v _TRISA `Vuc ~T0 @X0 1 e@133 ]
+[; ;cms79f726.h: 45: volatile unsigned char TRISA @ 0x0085;
+"46
+[v _TRISB `Vuc ~T0 @X0 1 e@134 ]
+[; ;cms79f726.h: 46: volatile unsigned char TRISB @ 0x0086;
+"47
+[v _TRISC `Vuc ~T0 @X0 1 e@135 ]
+[; ;cms79f726.h: 47: volatile unsigned char TRISC @ 0x0087;
+"48
+[v _ANSEL1 `Vuc ~T0 @X0 1 e@137 ]
+[; ;cms79f726.h: 48: volatile unsigned char ANSEL1 @ 0x0089;
+"49
+[v _PIE1 `Vuc ~T0 @X0 1 e@140 ]
+[; ;cms79f726.h: 49: volatile unsigned char PIE1 @ 0x008C;
+"50
+[v _PIE2 `Vuc ~T0 @X0 1 e@141 ]
+[; ;cms79f726.h: 50: volatile unsigned char PIE2 @ 0x008D;
+"51
+[v _OSCCON `Vuc ~T0 @X0 1 e@143 ]
+[; ;cms79f726.h: 51: volatile unsigned char OSCCON @ 0x008F;
+"52
+[v _WDTCON `Vuc ~T0 @X0 1 e@144 ]
+[; ;cms79f726.h: 52: volatile unsigned char WDTCON @ 0x0090;
+"53
+[v _IOCA `Vuc ~T0 @X0 1 e@145 ]
+[; ;cms79f726.h: 53: volatile unsigned char IOCA @ 0x0091;
+"54
+[v _PR2 `Vuc ~T0 @X0 1 e@146 ]
+[; ;cms79f726.h: 54: volatile unsigned char PR2 @ 0x0092;
+"55
+[v _WPUB `Vuc ~T0 @X0 1 e@149 ]
+[; ;cms79f726.h: 55: volatile unsigned char WPUB @ 0x0095;
+"56
+[v _IOCB `Vuc ~T0 @X0 1 e@150 ]
+[; ;cms79f726.h: 56: volatile unsigned char IOCB @ 0x0096;
+"57
+[v _WPDB `Vuc ~T0 @X0 1 e@151 ]
+[; ;cms79f726.h: 57: volatile unsigned char WPDB @ 0x0097;
+"58
+[v _PWMCON `Vuc ~T0 @X0 1 e@153 ]
+[; ;cms79f726.h: 58: volatile unsigned char PWMCON @ 0x0099;
+"59
+[v _PWM1CYC `Vuc ~T0 @X0 1 e@154 ]
+[; ;cms79f726.h: 59: volatile unsigned char PWM1CYC @ 0x009A;
+"60
+[v _PWM2CYC `Vuc ~T0 @X0 1 e@155 ]
+[; ;cms79f726.h: 60: volatile unsigned char PWM2CYC @ 0x009B;
+"61
+[v _ADRESL `Vuc ~T0 @X0 1 e@156 ]
+[; ;cms79f726.h: 61: volatile unsigned char ADRESL @ 0x009C;
+"62
+[v _ADRESH `Vuc ~T0 @X0 1 e@157 ]
+[; ;cms79f726.h: 62: volatile unsigned char ADRESH @ 0x009D;
+"63
+[v _ADCON0 `Vuc ~T0 @X0 1 e@158 ]
+[; ;cms79f726.h: 63: volatile unsigned char ADCON0 @ 0x009E;
+"64
+[v _ADCON1 `Vuc ~T0 @X0 1 e@159 ]
+[; ;cms79f726.h: 64: volatile unsigned char ADCON1 @ 0x009F;
+"65
+[v _WPUA `Vuc ~T0 @X0 1 e@263 ]
+[; ;cms79f726.h: 65: volatile unsigned char WPUA @ 0x0107;
+"66
+[v _WPUC `Vuc ~T0 @X0 1 e@264 ]
+[; ;cms79f726.h: 66: volatile unsigned char WPUC @ 0x0108;
+"67
+[v _ANSEL2 `Vuc ~T0 @X0 1 e@265 ]
+[; ;cms79f726.h: 67: volatile unsigned char ANSEL2 @ 0x0109;
+"68
+[v _EEDAT `Vuc ~T0 @X0 1 e@268 ]
+[; ;cms79f726.h: 68: volatile unsigned char EEDAT @ 0x010C;
+"69
+[v _EEADR `Vuc ~T0 @X0 1 e@269 ]
+[; ;cms79f726.h: 69: volatile unsigned char EEADR @ 0x010D;
+"70
+[v _EEDATH `Vuc ~T0 @X0 1 e@270 ]
+[; ;cms79f726.h: 70: volatile unsigned char EEDATH @ 0x010E;
+"71
+[v _EEADRH `Vuc ~T0 @X0 1 e@271 ]
+[; ;cms79f726.h: 71: volatile unsigned char EEADRH @ 0x010F;
+"72
+[v _TABLE_SPH `Vuc ~T0 @X0 1 e@272 ]
+[; ;cms79f726.h: 72: volatile unsigned char TABLE_SPH @ 0x0110;
+"73
+[v _TABLE_SPL `Vuc ~T0 @X0 1 e@273 ]
+[; ;cms79f726.h: 73: volatile unsigned char TABLE_SPL @ 0x0111;
+"74
+[v _TABLE_DATAH `Vuc ~T0 @X0 1 e@274 ]
+[; ;cms79f726.h: 74: volatile unsigned char TABLE_DATAH @ 0x0112;
+"75
+[v _SEGCUR `Vuc ~T0 @X0 1 e@275 ]
+[; ;cms79f726.h: 75: volatile unsigned char SEGCUR @ 0x0113;
+"76
+[v _PALEN `Vuc ~T0 @X0 1 e@276 ]
+[; ;cms79f726.h: 76: volatile unsigned char PALEN @ 0x0114;
+"77
+[v _PBLEN `Vuc ~T0 @X0 1 e@277 ]
+[; ;cms79f726.h: 77: volatile unsigned char PBLEN @ 0x0115;
+"78
+[v _PAHEN `Vuc ~T0 @X0 1 e@278 ]
+[; ;cms79f726.h: 78: volatile unsigned char PAHEN @ 0x0116;
+"79
+[v _PBHEN `Vuc ~T0 @X0 1 e@279 ]
+[; ;cms79f726.h: 79: volatile unsigned char PBHEN @ 0x0117;
+"80
+[v _EECON1 `Vuc ~T0 @X0 1 e@283 ]
+[; ;cms79f726.h: 80: volatile unsigned char EECON1 @ 0x011B;
+"81
+[v _EECON2 `Vuc ~T0 @X0 1 e@284 ]
+[; ;cms79f726.h: 81: volatile unsigned char EECON2 @ 0x011C;
+"87
+[v _IRP `Vb ~T0 @X0 1 e@31 ]
+[; ;cms79f726.h: 87: volatile bit IRP @ ((unsigned)&STATUS*8)+7;
+"88
+[v _RP1 `Vb ~T0 @X0 1 e@30 ]
+[; ;cms79f726.h: 88: volatile bit RP1 @ ((unsigned)&STATUS*8)+6;
+"89
+[v _RP0 `Vb ~T0 @X0 1 e@29 ]
+[; ;cms79f726.h: 89: volatile bit RP0 @ ((unsigned)&STATUS*8)+5;
+"90
+[v _TO `Vb ~T0 @X0 1 e@28 ]
+[; ;cms79f726.h: 90: volatile bit TO @ ((unsigned)&STATUS*8)+4;
+"91
+[v _PD `Vb ~T0 @X0 1 e@27 ]
+[; ;cms79f726.h: 91: volatile bit PD @ ((unsigned)&STATUS*8)+3;
+"92
+[v _Z `Vb ~T0 @X0 1 e@26 ]
+[; ;cms79f726.h: 92: volatile bit Z @ ((unsigned)&STATUS*8)+2;
+"93
+[v _DC `Vb ~T0 @X0 1 e@25 ]
+[; ;cms79f726.h: 93: volatile bit DC @ ((unsigned)&STATUS*8)+1;
+"94
+[v _C `Vb ~T0 @X0 1 e@24 ]
+[; ;cms79f726.h: 94: volatile bit C @ ((unsigned)&STATUS*8)+0;
+"98
+[v _RA7 `Vb ~T0 @X0 1 e@47 ]
+[; ;cms79f726.h: 98: volatile bit RA7 @ ((unsigned)&PORTA*8)+7;
+"99
+[v _RA6 `Vb ~T0 @X0 1 e@46 ]
+[; ;cms79f726.h: 99: volatile bit RA6 @ ((unsigned)&PORTA*8)+6;
+"100
+[v _RA5 `Vb ~T0 @X0 1 e@45 ]
+[; ;cms79f726.h: 100: volatile bit RA5 @ ((unsigned)&PORTA*8)+5;
+"101
+[v _RA4 `Vb ~T0 @X0 1 e@44 ]
+[; ;cms79f726.h: 101: volatile bit RA4 @ ((unsigned)&PORTA*8)+4;
+"102
+[v _RA3 `Vb ~T0 @X0 1 e@43 ]
+[; ;cms79f726.h: 102: volatile bit RA3 @ ((unsigned)&PORTA*8)+3;
+"103
+[v _RA2 `Vb ~T0 @X0 1 e@42 ]
+[; ;cms79f726.h: 103: volatile bit RA2 @ ((unsigned)&PORTA*8)+2;
+"104
+[v _RA1 `Vb ~T0 @X0 1 e@41 ]
+[; ;cms79f726.h: 104: volatile bit RA1 @ ((unsigned)&PORTA*8)+1;
+"105
+[v _RA0 `Vb ~T0 @X0 1 e@40 ]
+[; ;cms79f726.h: 105: volatile bit RA0 @ ((unsigned)&PORTA*8)+0;
+"109
+[v _RB7 `Vb ~T0 @X0 1 e@55 ]
+[; ;cms79f726.h: 109: volatile bit RB7 @ ((unsigned)&PORTB*8)+7;
+"110
+[v _RB6 `Vb ~T0 @X0 1 e@54 ]
+[; ;cms79f726.h: 110: volatile bit RB6 @ ((unsigned)&PORTB*8)+6;
+"111
+[v _RB5 `Vb ~T0 @X0 1 e@53 ]
+[; ;cms79f726.h: 111: volatile bit RB5 @ ((unsigned)&PORTB*8)+5;
+"112
+[v _RB4 `Vb ~T0 @X0 1 e@52 ]
+[; ;cms79f726.h: 112: volatile bit RB4 @ ((unsigned)&PORTB*8)+4;
+"113
+[v _RB3 `Vb ~T0 @X0 1 e@51 ]
+[; ;cms79f726.h: 113: volatile bit RB3 @ ((unsigned)&PORTB*8)+3;
+"114
+[v _RB2 `Vb ~T0 @X0 1 e@50 ]
+[; ;cms79f726.h: 114: volatile bit RB2 @ ((unsigned)&PORTB*8)+2;
+"115
+[v _RB1 `Vb ~T0 @X0 1 e@49 ]
+[; ;cms79f726.h: 115: volatile bit RB1 @ ((unsigned)&PORTB*8)+1;
+"116
+[v _RB0 `Vb ~T0 @X0 1 e@48 ]
+[; ;cms79f726.h: 116: volatile bit RB0 @ ((unsigned)&PORTB*8)+0;
+"120
+[v _RC1 `Vb ~T0 @X0 1 e@57 ]
+[; ;cms79f726.h: 120: volatile bit RC1 @ ((unsigned)&PORTC*8)+1;
+"121
+[v _RC0 `Vb ~T0 @X0 1 e@56 ]
+[; ;cms79f726.h: 121: volatile bit RC0 @ ((unsigned)&PORTC*8)+0;
+"125
+[v _ANS7 `Vb ~T0 @X0 1 e@79 ]
+[; ;cms79f726.h: 125: volatile bit ANS7 @ ((unsigned)&ANSEL0*8)+7;
+"126
+[v _ANS6 `Vb ~T0 @X0 1 e@78 ]
+[; ;cms79f726.h: 126: volatile bit ANS6 @ ((unsigned)&ANSEL0*8)+6;
+"127
+[v _ANS5 `Vb ~T0 @X0 1 e@77 ]
+[; ;cms79f726.h: 127: volatile bit ANS5 @ ((unsigned)&ANSEL0*8)+5;
+"128
+[v _ANS4 `Vb ~T0 @X0 1 e@76 ]
+[; ;cms79f726.h: 128: volatile bit ANS4 @ ((unsigned)&ANSEL0*8)+4;
+"129
+[v _ANS3 `Vb ~T0 @X0 1 e@75 ]
+[; ;cms79f726.h: 129: volatile bit ANS3 @ ((unsigned)&ANSEL0*8)+3;
+"130
+[v _ANS2 `Vb ~T0 @X0 1 e@74 ]
+[; ;cms79f726.h: 130: volatile bit ANS2 @ ((unsigned)&ANSEL0*8)+2;
+"131
+[v _ANS1 `Vb ~T0 @X0 1 e@73 ]
+[; ;cms79f726.h: 131: volatile bit ANS1 @ ((unsigned)&ANSEL0*8)+1;
+"132
+[v _ANS0 `Vb ~T0 @X0 1 e@72 ]
+[; ;cms79f726.h: 132: volatile bit ANS0 @ ((unsigned)&ANSEL0*8)+0;
+"136
+[v _GIE `Vb ~T0 @X0 1 e@95 ]
+[; ;cms79f726.h: 136: volatile bit GIE @ ((unsigned)&INTCON*8)+7;
+"137
+[v _PEIE `Vb ~T0 @X0 1 e@94 ]
+[; ;cms79f726.h: 137: volatile bit PEIE @ ((unsigned)&INTCON*8)+6;
+"138
+[v _T0IE `Vb ~T0 @X0 1 e@93 ]
+[; ;cms79f726.h: 138: volatile bit T0IE @ ((unsigned)&INTCON*8)+5;
+"139
+[v _INTE `Vb ~T0 @X0 1 e@92 ]
+[; ;cms79f726.h: 139: volatile bit INTE @ ((unsigned)&INTCON*8)+4;
+"140
+[v _RBIE `Vb ~T0 @X0 1 e@91 ]
+[; ;cms79f726.h: 140: volatile bit RBIE @ ((unsigned)&INTCON*8)+3;
+"141
+[v _T0IF `Vb ~T0 @X0 1 e@90 ]
+[; ;cms79f726.h: 141: volatile bit T0IF @ ((unsigned)&INTCON*8)+2;
+"142
+[v _INTF `Vb ~T0 @X0 1 e@89 ]
+[; ;cms79f726.h: 142: volatile bit INTF @ ((unsigned)&INTCON*8)+1;
+"143
+[v _RBIF `Vb ~T0 @X0 1 e@88 ]
+[; ;cms79f726.h: 143: volatile bit RBIF @ ((unsigned)&INTCON*8)+0;
+"147
+[v _ADIF `Vb ~T0 @X0 1 e@102 ]
+[; ;cms79f726.h: 147: volatile bit ADIF @ ((unsigned)&PIR1*8)+6;
+"148
+[v _RCIF `Vb ~T0 @X0 1 e@101 ]
+[; ;cms79f726.h: 148: volatile bit RCIF @ ((unsigned)&PIR1*8)+5;
+"149
+[v _TXIF `Vb ~T0 @X0 1 e@100 ]
+[; ;cms79f726.h: 149: volatile bit TXIF @ ((unsigned)&PIR1*8)+4;
+"150
+[v _CCP1IF `Vb ~T0 @X0 1 e@98 ]
+[; ;cms79f726.h: 150: volatile bit CCP1IF @ ((unsigned)&PIR1*8)+2;
+"151
+[v _TMR2IF `Vb ~T0 @X0 1 e@97 ]
+[; ;cms79f726.h: 151: volatile bit TMR2IF @ ((unsigned)&PIR1*8)+1;
+"152
+[v _TMR1IF `Vb ~T0 @X0 1 e@96 ]
+[; ;cms79f726.h: 152: volatile bit TMR1IF @ ((unsigned)&PIR1*8)+0;
+"156
+[v _TKIF `Vb ~T0 @X0 1 e@110 ]
+[; ;cms79f726.h: 156: volatile bit TKIF @ ((unsigned)&PIR2*8)+6;
+"157
+[v _RACIF `Vb ~T0 @X0 1 e@109 ]
+[; ;cms79f726.h: 157: volatile bit RACIF @ ((unsigned)&PIR2*8)+5;
+"158
+[v _EEIF `Vb ~T0 @X0 1 e@108 ]
+[; ;cms79f726.h: 158: volatile bit EEIF @ ((unsigned)&PIR2*8)+4;
+"159
+[v _CCP2IF `Vb ~T0 @X0 1 e@104 ]
+[; ;cms79f726.h: 159: volatile bit CCP2IF @ ((unsigned)&PIR2*8)+0;
+"163
+[v _T1GINV `Vb ~T0 @X0 1 e@135 ]
+[; ;cms79f726.h: 163: volatile bit T1GINV @ ((unsigned)&T1CON*8)+7;
+"164
+[v _TMR1GE `Vb ~T0 @X0 1 e@134 ]
+[; ;cms79f726.h: 164: volatile bit TMR1GE @ ((unsigned)&T1CON*8)+6;
+"165
+[v _T1CKPS1 `Vb ~T0 @X0 1 e@133 ]
+[; ;cms79f726.h: 165: volatile bit T1CKPS1 @ ((unsigned)&T1CON*8)+5;
+"166
+[v _T1CKPS0 `Vb ~T0 @X0 1 e@132 ]
+[; ;cms79f726.h: 166: volatile bit T1CKPS0 @ ((unsigned)&T1CON*8)+4;
+"167
+[v _T1SYNC `Vb ~T0 @X0 1 e@130 ]
+[; ;cms79f726.h: 167: volatile bit T1SYNC @ ((unsigned)&T1CON*8)+2;
+"168
+[v _TMR1CS `Vb ~T0 @X0 1 e@129 ]
+[; ;cms79f726.h: 168: volatile bit TMR1CS @ ((unsigned)&T1CON*8)+1;
+"169
+[v _TMR1ON `Vb ~T0 @X0 1 e@128 ]
+[; ;cms79f726.h: 169: volatile bit TMR1ON @ ((unsigned)&T1CON*8)+0;
+"173
+[v _TOUTPS3 `Vb ~T0 @X0 1 e@150 ]
+[; ;cms79f726.h: 173: volatile bit TOUTPS3 @ ((unsigned)&T2CON*8)+6;
+"174
+[v _TOUTPS2 `Vb ~T0 @X0 1 e@149 ]
+[; ;cms79f726.h: 174: volatile bit TOUTPS2 @ ((unsigned)&T2CON*8)+5;
+"175
+[v _TOUTPS1 `Vb ~T0 @X0 1 e@148 ]
+[; ;cms79f726.h: 175: volatile bit TOUTPS1 @ ((unsigned)&T2CON*8)+4;
+"176
+[v _TOUTPS0 `Vb ~T0 @X0 1 e@147 ]
+[; ;cms79f726.h: 176: volatile bit TOUTPS0 @ ((unsigned)&T2CON*8)+3;
+"177
+[v _TMR2ON `Vb ~T0 @X0 1 e@146 ]
+[; ;cms79f726.h: 177: volatile bit TMR2ON @ ((unsigned)&T2CON*8)+2;
+"178
+[v _T2CKPS1 `Vb ~T0 @X0 1 e@145 ]
+[; ;cms79f726.h: 178: volatile bit T2CKPS1 @ ((unsigned)&T2CON*8)+1;
+"179
+[v _T2CKPS0 `Vb ~T0 @X0 1 e@144 ]
+[; ;cms79f726.h: 179: volatile bit T2CKPS0 @ ((unsigned)&T2CON*8)+0;
+"183
+[v _DC1B1 `Vb ~T0 @X0 1 e@189 ]
+[; ;cms79f726.h: 183: volatile bit DC1B1 @ ((unsigned)&CCP1CON*8)+5;
+"184
+[v _DC1B0 `Vb ~T0 @X0 1 e@188 ]
+[; ;cms79f726.h: 184: volatile bit DC1B0 @ ((unsigned)&CCP1CON*8)+4;
+"185
+[v _CCP1M3 `Vb ~T0 @X0 1 e@187 ]
+[; ;cms79f726.h: 185: volatile bit CCP1M3 @ ((unsigned)&CCP1CON*8)+3;
+"186
+[v _CCP1M2 `Vb ~T0 @X0 1 e@186 ]
+[; ;cms79f726.h: 186: volatile bit CCP1M2 @ ((unsigned)&CCP1CON*8)+2;
+"187
+[v _CCP1M1 `Vb ~T0 @X0 1 e@185 ]
+[; ;cms79f726.h: 187: volatile bit CCP1M1 @ ((unsigned)&CCP1CON*8)+1;
+"188
+[v _CCP1M0 `Vb ~T0 @X0 1 e@184 ]
+[; ;cms79f726.h: 188: volatile bit CCP1M0 @ ((unsigned)&CCP1CON*8)+0;
+"192
+[v _SPEN `Vb ~T0 @X0 1 e@199 ]
+[; ;cms79f726.h: 192: volatile bit SPEN @ ((unsigned)&RCSTA*8)+7;
+"193
+[v _RX9EN `Vb ~T0 @X0 1 e@198 ]
+[; ;cms79f726.h: 193: volatile bit RX9EN @ ((unsigned)&RCSTA*8)+6;
+"194
+[v _SREN `Vb ~T0 @X0 1 e@197 ]
+[; ;cms79f726.h: 194: volatile bit SREN @ ((unsigned)&RCSTA*8)+5;
+"195
+[v _CREN `Vb ~T0 @X0 1 e@196 ]
+[; ;cms79f726.h: 195: volatile bit CREN @ ((unsigned)&RCSTA*8)+4;
+"196
+[v _RCIDL `Vb ~T0 @X0 1 e@195 ]
+[; ;cms79f726.h: 196: volatile bit RCIDL @ ((unsigned)&RCSTA*8)+3;
+"197
+[v _FERR `Vb ~T0 @X0 1 e@194 ]
+[; ;cms79f726.h: 197: volatile bit FERR @ ((unsigned)&RCSTA*8)+2;
+"198
+[v _OERR `Vb ~T0 @X0 1 e@193 ]
+[; ;cms79f726.h: 198: volatile bit OERR @ ((unsigned)&RCSTA*8)+1;
+"199
+[v _RX9D `Vb ~T0 @X0 1 e@192 ]
+[; ;cms79f726.h: 199: volatile bit RX9D @ ((unsigned)&RCSTA*8)+0;
+"203
+[v _DC2B1 `Vb ~T0 @X0 1 e@237 ]
+[; ;cms79f726.h: 203: volatile bit DC2B1 @ ((unsigned)&CCP2CON*8)+5;
+"204
+[v _DC2B0 `Vb ~T0 @X0 1 e@236 ]
+[; ;cms79f726.h: 204: volatile bit DC2B0 @ ((unsigned)&CCP2CON*8)+4;
+"205
+[v _CCP2M3 `Vb ~T0 @X0 1 e@235 ]
+[; ;cms79f726.h: 205: volatile bit CCP2M3 @ ((unsigned)&CCP2CON*8)+3;
+"206
+[v _CCP2M2 `Vb ~T0 @X0 1 e@234 ]
+[; ;cms79f726.h: 206: volatile bit CCP2M2 @ ((unsigned)&CCP2CON*8)+2;
+"207
+[v _CCP2M1 `Vb ~T0 @X0 1 e@233 ]
+[; ;cms79f726.h: 207: volatile bit CCP2M1 @ ((unsigned)&CCP2CON*8)+1;
+"208
+[v _CCP2M0 `Vb ~T0 @X0 1 e@232 ]
+[; ;cms79f726.h: 208: volatile bit CCP2M0 @ ((unsigned)&CCP2CON*8)+0;
+"212
+[v _CSRC `Vb ~T0 @X0 1 e@247 ]
+[; ;cms79f726.h: 212: volatile bit CSRC @ ((unsigned)&TXSTA*8)+7;
+"213
+[v _TX9EN `Vb ~T0 @X0 1 e@246 ]
+[; ;cms79f726.h: 213: volatile bit TX9EN @ ((unsigned)&TXSTA*8)+6;
+"214
+[v _TXEN `Vb ~T0 @X0 1 e@245 ]
+[; ;cms79f726.h: 214: volatile bit TXEN @ ((unsigned)&TXSTA*8)+5;
+"215
+[v _SYNC `Vb ~T0 @X0 1 e@244 ]
+[; ;cms79f726.h: 215: volatile bit SYNC @ ((unsigned)&TXSTA*8)+4;
+"216
+[v _SCKP `Vb ~T0 @X0 1 e@243 ]
+[; ;cms79f726.h: 216: volatile bit SCKP @ ((unsigned)&TXSTA*8)+3;
+"217
+[v _TRMT `Vb ~T0 @X0 1 e@241 ]
+[; ;cms79f726.h: 217: volatile bit TRMT @ ((unsigned)&TXSTA*8)+1;
+"218
+[v _TX9D `Vb ~T0 @X0 1 e@240 ]
+[; ;cms79f726.h: 218: volatile bit TX9D @ ((unsigned)&TXSTA*8)+0;
+"222
+[v _BRG7 `Vb ~T0 @X0 1 e@255 ]
+[; ;cms79f726.h: 222: volatile bit BRG7 @ ((unsigned)&SPBRG*8)+7;
+"223
+[v _BRG6 `Vb ~T0 @X0 1 e@254 ]
+[; ;cms79f726.h: 223: volatile bit BRG6 @ ((unsigned)&SPBRG*8)+6;
+"224
+[v _BRG5 `Vb ~T0 @X0 1 e@253 ]
+[; ;cms79f726.h: 224: volatile bit BRG5 @ ((unsigned)&SPBRG*8)+5;
+"225
+[v _BRG4 `Vb ~T0 @X0 1 e@252 ]
+[; ;cms79f726.h: 225: volatile bit BRG4 @ ((unsigned)&SPBRG*8)+4;
+"226
+[v _BRG3 `Vb ~T0 @X0 1 e@251 ]
+[; ;cms79f726.h: 226: volatile bit BRG3 @ ((unsigned)&SPBRG*8)+3;
+"227
+[v _BRG2 `Vb ~T0 @X0 1 e@250 ]
+[; ;cms79f726.h: 227: volatile bit BRG2 @ ((unsigned)&SPBRG*8)+2;
+"228
+[v _BRG1 `Vb ~T0 @X0 1 e@249 ]
+[; ;cms79f726.h: 228: volatile bit BRG1 @ ((unsigned)&SPBRG*8)+1;
+"229
+[v _BRG0 `Vb ~T0 @X0 1 e@248 ]
+[; ;cms79f726.h: 229: volatile bit BRG0 @ ((unsigned)&SPBRG*8)+0;
+"233
+[v _RBPU `Vb ~T0 @X0 1 e@1039 ]
+[; ;cms79f726.h: 233: volatile bit RBPU @ ((unsigned)&OPTION_REG*8)+7;
+"234
+[v _INTEDG `Vb ~T0 @X0 1 e@1038 ]
+[; ;cms79f726.h: 234: volatile bit INTEDG @ ((unsigned)&OPTION_REG*8)+6;
+"235
+[v _T0CS `Vb ~T0 @X0 1 e@1037 ]
+[; ;cms79f726.h: 235: volatile bit T0CS @ ((unsigned)&OPTION_REG*8)+5;
+"236
+[v _T0SE `Vb ~T0 @X0 1 e@1036 ]
+[; ;cms79f726.h: 236: volatile bit T0SE @ ((unsigned)&OPTION_REG*8)+4;
+"237
+[v _PSA `Vb ~T0 @X0 1 e@1035 ]
+[; ;cms79f726.h: 237: volatile bit PSA @ ((unsigned)&OPTION_REG*8)+3;
+"238
+[v _PS2 `Vb ~T0 @X0 1 e@1034 ]
+[; ;cms79f726.h: 238: volatile bit PS2 @ ((unsigned)&OPTION_REG*8)+2;
+"239
+[v _PS1 `Vb ~T0 @X0 1 e@1033 ]
+[; ;cms79f726.h: 239: volatile bit PS1 @ ((unsigned)&OPTION_REG*8)+1;
+"240
+[v _PS0 `Vb ~T0 @X0 1 e@1032 ]
+[; ;cms79f726.h: 240: volatile bit PS0 @ ((unsigned)&OPTION_REG*8)+0;
+"244
+[v _TRISA7 `Vb ~T0 @X0 1 e@1071 ]
+[; ;cms79f726.h: 244: volatile bit TRISA7 @ ((unsigned)&TRISA*8)+7;
+"245
+[v _TRISA6 `Vb ~T0 @X0 1 e@1070 ]
+[; ;cms79f726.h: 245: volatile bit TRISA6 @ ((unsigned)&TRISA*8)+6;
+"246
+[v _TRISA5 `Vb ~T0 @X0 1 e@1069 ]
+[; ;cms79f726.h: 246: volatile bit TRISA5 @ ((unsigned)&TRISA*8)+5;
+"247
+[v _TRISA4 `Vb ~T0 @X0 1 e@1068 ]
+[; ;cms79f726.h: 247: volatile bit TRISA4 @ ((unsigned)&TRISA*8)+4;
+"248
+[v _TRISA3 `Vb ~T0 @X0 1 e@1067 ]
+[; ;cms79f726.h: 248: volatile bit TRISA3 @ ((unsigned)&TRISA*8)+3;
+"249
+[v _TRISA2 `Vb ~T0 @X0 1 e@1066 ]
+[; ;cms79f726.h: 249: volatile bit TRISA2 @ ((unsigned)&TRISA*8)+2;
+"250
+[v _TRISA1 `Vb ~T0 @X0 1 e@1065 ]
+[; ;cms79f726.h: 250: volatile bit TRISA1 @ ((unsigned)&TRISA*8)+1;
+"251
+[v _TRISA0 `Vb ~T0 @X0 1 e@1064 ]
+[; ;cms79f726.h: 251: volatile bit TRISA0 @ ((unsigned)&TRISA*8)+0;
+"255
+[v _TRISB7 `Vb ~T0 @X0 1 e@1079 ]
+[; ;cms79f726.h: 255: volatile bit TRISB7 @ ((unsigned)&TRISB*8)+7;
+"256
+[v _TRISB6 `Vb ~T0 @X0 1 e@1078 ]
+[; ;cms79f726.h: 256: volatile bit TRISB6 @ ((unsigned)&TRISB*8)+6;
+"257
+[v _TRISB5 `Vb ~T0 @X0 1 e@1077 ]
+[; ;cms79f726.h: 257: volatile bit TRISB5 @ ((unsigned)&TRISB*8)+5;
+"258
+[v _TRISB4 `Vb ~T0 @X0 1 e@1076 ]
+[; ;cms79f726.h: 258: volatile bit TRISB4 @ ((unsigned)&TRISB*8)+4;
+"259
+[v _TRISB3 `Vb ~T0 @X0 1 e@1075 ]
+[; ;cms79f726.h: 259: volatile bit TRISB3 @ ((unsigned)&TRISB*8)+3;
+"260
+[v _TRISB2 `Vb ~T0 @X0 1 e@1074 ]
+[; ;cms79f726.h: 260: volatile bit TRISB2 @ ((unsigned)&TRISB*8)+2;
+"261
+[v _TRISB1 `Vb ~T0 @X0 1 e@1073 ]
+[; ;cms79f726.h: 261: volatile bit TRISB1 @ ((unsigned)&TRISB*8)+1;
+"262
+[v _TRISB0 `Vb ~T0 @X0 1 e@1072 ]
+[; ;cms79f726.h: 262: volatile bit TRISB0 @ ((unsigned)&TRISB*8)+0;
+"266
+[v _TRISC1 `Vb ~T0 @X0 1 e@1081 ]
+[; ;cms79f726.h: 266: volatile bit TRISC1 @ ((unsigned)&TRISC*8)+1;
+"267
+[v _TRISC0 `Vb ~T0 @X0 1 e@1080 ]
+[; ;cms79f726.h: 267: volatile bit TRISC0 @ ((unsigned)&TRISC*8)+0;
+"271
+[v _ANS15 `Vb ~T0 @X0 1 e@1103 ]
+[; ;cms79f726.h: 271: volatile bit ANS15 @ ((unsigned)&ANSEL1*8)+7;
+"272
+[v _ANS14 `Vb ~T0 @X0 1 e@1102 ]
+[; ;cms79f726.h: 272: volatile bit ANS14 @ ((unsigned)&ANSEL1*8)+6;
+"273
+[v _ANS13 `Vb ~T0 @X0 1 e@1101 ]
+[; ;cms79f726.h: 273: volatile bit ANS13 @ ((unsigned)&ANSEL1*8)+5;
+"274
+[v _ANS12 `Vb ~T0 @X0 1 e@1100 ]
+[; ;cms79f726.h: 274: volatile bit ANS12 @ ((unsigned)&ANSEL1*8)+4;
+"275
+[v _ANS11 `Vb ~T0 @X0 1 e@1099 ]
+[; ;cms79f726.h: 275: volatile bit ANS11 @ ((unsigned)&ANSEL1*8)+3;
+"276
+[v _ANS10 `Vb ~T0 @X0 1 e@1098 ]
+[; ;cms79f726.h: 276: volatile bit ANS10 @ ((unsigned)&ANSEL1*8)+2;
+"277
+[v _ANS9 `Vb ~T0 @X0 1 e@1097 ]
+[; ;cms79f726.h: 277: volatile bit ANS9 @ ((unsigned)&ANSEL1*8)+1;
+"278
+[v _ANS8 `Vb ~T0 @X0 1 e@1096 ]
+[; ;cms79f726.h: 278: volatile bit ANS8 @ ((unsigned)&ANSEL1*8)+0;
+"282
+[v _ADIE `Vb ~T0 @X0 1 e@1126 ]
+[; ;cms79f726.h: 282: volatile bit ADIE @ ((unsigned)&PIE1*8)+6;
+"283
+[v _RCIE `Vb ~T0 @X0 1 e@1125 ]
+[; ;cms79f726.h: 283: volatile bit RCIE @ ((unsigned)&PIE1*8)+5;
+"284
+[v _TXIE `Vb ~T0 @X0 1 e@1124 ]
+[; ;cms79f726.h: 284: volatile bit TXIE @ ((unsigned)&PIE1*8)+4;
+"285
+[v _CCP1IE `Vb ~T0 @X0 1 e@1122 ]
+[; ;cms79f726.h: 285: volatile bit CCP1IE @ ((unsigned)&PIE1*8)+2;
+"286
+[v _TMR2IE `Vb ~T0 @X0 1 e@1121 ]
+[; ;cms79f726.h: 286: volatile bit TMR2IE @ ((unsigned)&PIE1*8)+1;
+"287
+[v _TMR1IE `Vb ~T0 @X0 1 e@1120 ]
+[; ;cms79f726.h: 287: volatile bit TMR1IE @ ((unsigned)&PIE1*8)+0;
+"291
+[v _TKIE `Vb ~T0 @X0 1 e@1134 ]
+[; ;cms79f726.h: 291: volatile bit TKIE @ ((unsigned)&PIE2*8)+6;
+"292
+[v _RACIE `Vb ~T0 @X0 1 e@1133 ]
+[; ;cms79f726.h: 292: volatile bit RACIE @ ((unsigned)&PIE2*8)+5;
+"293
+[v _EEIE `Vb ~T0 @X0 1 e@1132 ]
+[; ;cms79f726.h: 293: volatile bit EEIE @ ((unsigned)&PIE2*8)+4;
+"294
+[v _CCP2IE `Vb ~T0 @X0 1 e@1128 ]
+[; ;cms79f726.h: 294: volatile bit CCP2IE @ ((unsigned)&PIE2*8)+0;
+"298
+[v _IRCF2 `Vb ~T0 @X0 1 e@1150 ]
+[; ;cms79f726.h: 298: volatile bit IRCF2 @ ((unsigned)&OSCCON*8)+6;
+"299
+[v _IRCF1 `Vb ~T0 @X0 1 e@1149 ]
+[; ;cms79f726.h: 299: volatile bit IRCF1 @ ((unsigned)&OSCCON*8)+5;
+"300
+[v _IRCF0 `Vb ~T0 @X0 1 e@1148 ]
+[; ;cms79f726.h: 300: volatile bit IRCF0 @ ((unsigned)&OSCCON*8)+4;
+"304
+[v _SWDTEN `Vb ~T0 @X0 1 e@1152 ]
+[; ;cms79f726.h: 304: volatile bit SWDTEN @ ((unsigned)&WDTCON*8)+0;
+"308
+[v _IOCA7 `Vb ~T0 @X0 1 e@1167 ]
+[; ;cms79f726.h: 308: volatile bit IOCA7 @ ((unsigned)&IOCA*8)+7;
+"309
+[v _IOCA6 `Vb ~T0 @X0 1 e@1166 ]
+[; ;cms79f726.h: 309: volatile bit IOCA6 @ ((unsigned)&IOCA*8)+6;
+"310
+[v _IOCA5 `Vb ~T0 @X0 1 e@1165 ]
+[; ;cms79f726.h: 310: volatile bit IOCA5 @ ((unsigned)&IOCA*8)+5;
+"311
+[v _IOCA4 `Vb ~T0 @X0 1 e@1164 ]
+[; ;cms79f726.h: 311: volatile bit IOCA4 @ ((unsigned)&IOCA*8)+4;
+"312
+[v _IOCA3 `Vb ~T0 @X0 1 e@1163 ]
+[; ;cms79f726.h: 312: volatile bit IOCA3 @ ((unsigned)&IOCA*8)+3;
+"313
+[v _IOCA2 `Vb ~T0 @X0 1 e@1162 ]
+[; ;cms79f726.h: 313: volatile bit IOCA2 @ ((unsigned)&IOCA*8)+2;
+"314
+[v _IOCA1 `Vb ~T0 @X0 1 e@1161 ]
+[; ;cms79f726.h: 314: volatile bit IOCA1 @ ((unsigned)&IOCA*8)+1;
+"315
+[v _IOCA0 `Vb ~T0 @X0 1 e@1160 ]
+[; ;cms79f726.h: 315: volatile bit IOCA0 @ ((unsigned)&IOCA*8)+0;
+"319
+[v _WPUB7 `Vb ~T0 @X0 1 e@1199 ]
+[; ;cms79f726.h: 319: volatile bit WPUB7 @ ((unsigned)&WPUB*8)+7;
+"320
+[v _WPUB6 `Vb ~T0 @X0 1 e@1198 ]
+[; ;cms79f726.h: 320: volatile bit WPUB6 @ ((unsigned)&WPUB*8)+6;
+"321
+[v _WPUB5 `Vb ~T0 @X0 1 e@1197 ]
+[; ;cms79f726.h: 321: volatile bit WPUB5 @ ((unsigned)&WPUB*8)+5;
+"322
+[v _WPUB4 `Vb ~T0 @X0 1 e@1196 ]
+[; ;cms79f726.h: 322: volatile bit WPUB4 @ ((unsigned)&WPUB*8)+4;
+"323
+[v _WPUB3 `Vb ~T0 @X0 1 e@1195 ]
+[; ;cms79f726.h: 323: volatile bit WPUB3 @ ((unsigned)&WPUB*8)+3;
+"324
+[v _WPUB2 `Vb ~T0 @X0 1 e@1194 ]
+[; ;cms79f726.h: 324: volatile bit WPUB2 @ ((unsigned)&WPUB*8)+2;
+"325
+[v _WPUB1 `Vb ~T0 @X0 1 e@1193 ]
+[; ;cms79f726.h: 325: volatile bit WPUB1 @ ((unsigned)&WPUB*8)+1;
+"326
+[v _WPUB0 `Vb ~T0 @X0 1 e@1192 ]
+[; ;cms79f726.h: 326: volatile bit WPUB0 @ ((unsigned)&WPUB*8)+0;
+"330
+[v _IOCB7 `Vb ~T0 @X0 1 e@1207 ]
+[; ;cms79f726.h: 330: volatile bit IOCB7 @ ((unsigned)&IOCB*8)+7;
+"331
+[v _IOCB6 `Vb ~T0 @X0 1 e@1206 ]
+[; ;cms79f726.h: 331: volatile bit IOCB6 @ ((unsigned)&IOCB*8)+6;
+"332
+[v _IOCB5 `Vb ~T0 @X0 1 e@1205 ]
+[; ;cms79f726.h: 332: volatile bit IOCB5 @ ((unsigned)&IOCB*8)+5;
+"333
+[v _IOCB4 `Vb ~T0 @X0 1 e@1204 ]
+[; ;cms79f726.h: 333: volatile bit IOCB4 @ ((unsigned)&IOCB*8)+4;
+"334
+[v _IOCB3 `Vb ~T0 @X0 1 e@1203 ]
+[; ;cms79f726.h: 334: volatile bit IOCB3 @ ((unsigned)&IOCB*8)+3;
+"335
+[v _IOCB2 `Vb ~T0 @X0 1 e@1202 ]
+[; ;cms79f726.h: 335: volatile bit IOCB2 @ ((unsigned)&IOCB*8)+2;
+"336
+[v _IOCB1 `Vb ~T0 @X0 1 e@1201 ]
+[; ;cms79f726.h: 336: volatile bit IOCB1 @ ((unsigned)&IOCB*8)+1;
+"337
+[v _IOCB0 `Vb ~T0 @X0 1 e@1200 ]
+[; ;cms79f726.h: 337: volatile bit IOCB0 @ ((unsigned)&IOCB*8)+0;
+"341
+[v _WPDB7 `Vb ~T0 @X0 1 e@1215 ]
+[; ;cms79f726.h: 341: volatile bit WPDB7 @ ((unsigned)&WPDB*8)+7;
+"342
+[v _WPDB6 `Vb ~T0 @X0 1 e@1214 ]
+[; ;cms79f726.h: 342: volatile bit WPDB6 @ ((unsigned)&WPDB*8)+6;
+"343
+[v _WPDB5 `Vb ~T0 @X0 1 e@1213 ]
+[; ;cms79f726.h: 343: volatile bit WPDB5 @ ((unsigned)&WPDB*8)+5;
+"344
+[v _WPDB4 `Vb ~T0 @X0 1 e@1212 ]
+[; ;cms79f726.h: 344: volatile bit WPDB4 @ ((unsigned)&WPDB*8)+4;
+"345
+[v _WPDB3 `Vb ~T0 @X0 1 e@1211 ]
+[; ;cms79f726.h: 345: volatile bit WPDB3 @ ((unsigned)&WPDB*8)+3;
+"346
+[v _WPDB2 `Vb ~T0 @X0 1 e@1210 ]
+[; ;cms79f726.h: 346: volatile bit WPDB2 @ ((unsigned)&WPDB*8)+2;
+"347
+[v _WPDB1 `Vb ~T0 @X0 1 e@1209 ]
+[; ;cms79f726.h: 347: volatile bit WPDB1 @ ((unsigned)&WPDB*8)+1;
+"348
+[v _WPDB0 `Vb ~T0 @X0 1 e@1208 ]
+[; ;cms79f726.h: 348: volatile bit WPDB0 @ ((unsigned)&WPDB*8)+0;
+"352
+[v _CYC2EN `Vb ~T0 @X0 1 e@1230 ]
+[; ;cms79f726.h: 352: volatile bit CYC2EN @ ((unsigned)&PWMCON*8)+6;
+"353
+[v _CK21 `Vb ~T0 @X0 1 e@1229 ]
+[; ;cms79f726.h: 353: volatile bit CK21 @ ((unsigned)&PWMCON*8)+5;
+"354
+[v _CK20 `Vb ~T0 @X0 1 e@1228 ]
+[; ;cms79f726.h: 354: volatile bit CK20 @ ((unsigned)&PWMCON*8)+4;
+"355
+[v _CYC1EN `Vb ~T0 @X0 1 e@1226 ]
+[; ;cms79f726.h: 355: volatile bit CYC1EN @ ((unsigned)&PWMCON*8)+2;
+"356
+[v _CK11 `Vb ~T0 @X0 1 e@1225 ]
+[; ;cms79f726.h: 356: volatile bit CK11 @ ((unsigned)&PWMCON*8)+1;
+"357
+[v _CK10 `Vb ~T0 @X0 1 e@1224 ]
+[; ;cms79f726.h: 357: volatile bit CK10 @ ((unsigned)&PWMCON*8)+0;
+"361
+[v _ADCS1 `Vb ~T0 @X0 1 e@1271 ]
+[; ;cms79f726.h: 361: volatile bit ADCS1 @ ((unsigned)&ADCON0*8)+7;
+"362
+[v _ADCS0 `Vb ~T0 @X0 1 e@1270 ]
+[; ;cms79f726.h: 362: volatile bit ADCS0 @ ((unsigned)&ADCON0*8)+6;
+"363
+[v _CHS3 `Vb ~T0 @X0 1 e@1269 ]
+[; ;cms79f726.h: 363: volatile bit CHS3 @ ((unsigned)&ADCON0*8)+5;
+"364
+[v _CHS2 `Vb ~T0 @X0 1 e@1268 ]
+[; ;cms79f726.h: 364: volatile bit CHS2 @ ((unsigned)&ADCON0*8)+4;
+"365
+[v _CHS1 `Vb ~T0 @X0 1 e@1267 ]
+[; ;cms79f726.h: 365: volatile bit CHS1 @ ((unsigned)&ADCON0*8)+3;
+"366
+[v _CHS0 `Vb ~T0 @X0 1 e@1266 ]
+[; ;cms79f726.h: 366: volatile bit CHS0 @ ((unsigned)&ADCON0*8)+2;
+"367
+[v _GODONE `Vb ~T0 @X0 1 e@1265 ]
+[; ;cms79f726.h: 367: volatile bit GODONE @ ((unsigned)&ADCON0*8)+1;
+"368
+[v _ADON `Vb ~T0 @X0 1 e@1264 ]
+[; ;cms79f726.h: 368: volatile bit ADON @ ((unsigned)&ADCON0*8)+0;
+"372
+[v _ADFM `Vb ~T0 @X0 1 e@1279 ]
+[; ;cms79f726.h: 372: volatile bit ADFM @ ((unsigned)&ADCON1*8)+7;
+"373
+[v _CHS4 `Vb ~T0 @X0 1 e@1278 ]
+[; ;cms79f726.h: 373: volatile bit CHS4 @ ((unsigned)&ADCON1*8)+6;
+"377
+[v _WPUA7 `Vb ~T0 @X0 1 e@2111 ]
+[; ;cms79f726.h: 377: volatile bit WPUA7 @ ((unsigned)&WPUA*8)+7;
+"378
+[v _WPUA6 `Vb ~T0 @X0 1 e@2110 ]
+[; ;cms79f726.h: 378: volatile bit WPUA6 @ ((unsigned)&WPUA*8)+6;
+"379
+[v _WPUA5 `Vb ~T0 @X0 1 e@2109 ]
+[; ;cms79f726.h: 379: volatile bit WPUA5 @ ((unsigned)&WPUA*8)+5;
+"380
+[v _WPUA4 `Vb ~T0 @X0 1 e@2108 ]
+[; ;cms79f726.h: 380: volatile bit WPUA4 @ ((unsigned)&WPUA*8)+4;
+"381
+[v _WPUA3 `Vb ~T0 @X0 1 e@2107 ]
+[; ;cms79f726.h: 381: volatile bit WPUA3 @ ((unsigned)&WPUA*8)+3;
+"382
+[v _WPUA2 `Vb ~T0 @X0 1 e@2106 ]
+[; ;cms79f726.h: 382: volatile bit WPUA2 @ ((unsigned)&WPUA*8)+2;
+"383
+[v _WPUA1 `Vb ~T0 @X0 1 e@2105 ]
+[; ;cms79f726.h: 383: volatile bit WPUA1 @ ((unsigned)&WPUA*8)+1;
+"384
+[v _WPUA0 `Vb ~T0 @X0 1 e@2104 ]
+[; ;cms79f726.h: 384: volatile bit WPUA0 @ ((unsigned)&WPUA*8)+0;
+"388
+[v _WPUC1 `Vb ~T0 @X0 1 e@2113 ]
+[; ;cms79f726.h: 388: volatile bit WPUC1 @ ((unsigned)&WPUC*8)+1;
+"389
+[v _WPUC0 `Vb ~T0 @X0 1 e@2112 ]
+[; ;cms79f726.h: 389: volatile bit WPUC0 @ ((unsigned)&WPUC*8)+0;
+"393
+[v _ANS17 `Vb ~T0 @X0 1 e@2121 ]
+[; ;cms79f726.h: 393: volatile bit ANS17 @ ((unsigned)&ANSEL2*8)+1;
+"394
+[v _ANS16 `Vb ~T0 @X0 1 e@2120 ]
+[; ;cms79f726.h: 394: volatile bit ANS16 @ ((unsigned)&ANSEL2*8)+0;
+"398
+[v _EEDAT7 `Vb ~T0 @X0 1 e@2151 ]
+[; ;cms79f726.h: 398: volatile bit EEDAT7 @ ((unsigned)&EEDAT*8)+7;
+"399
+[v _EEDAT6 `Vb ~T0 @X0 1 e@2150 ]
+[; ;cms79f726.h: 399: volatile bit EEDAT6 @ ((unsigned)&EEDAT*8)+6;
+"400
+[v _EEDAT5 `Vb ~T0 @X0 1 e@2149 ]
+[; ;cms79f726.h: 400: volatile bit EEDAT5 @ ((unsigned)&EEDAT*8)+5;
+"401
+[v _EEDAT4 `Vb ~T0 @X0 1 e@2148 ]
+[; ;cms79f726.h: 401: volatile bit EEDAT4 @ ((unsigned)&EEDAT*8)+4;
+"402
+[v _EEDAT3 `Vb ~T0 @X0 1 e@2147 ]
+[; ;cms79f726.h: 402: volatile bit EEDAT3 @ ((unsigned)&EEDAT*8)+3;
+"403
+[v _EEDAT2 `Vb ~T0 @X0 1 e@2146 ]
+[; ;cms79f726.h: 403: volatile bit EEDAT2 @ ((unsigned)&EEDAT*8)+2;
+"404
+[v _EEDAT1 `Vb ~T0 @X0 1 e@2145 ]
+[; ;cms79f726.h: 404: volatile bit EEDAT1 @ ((unsigned)&EEDAT*8)+1;
+"405
+[v _EEDAT0 `Vb ~T0 @X0 1 e@2144 ]
+[; ;cms79f726.h: 405: volatile bit EEDAT0 @ ((unsigned)&EEDAT*8)+0;
+"409
+[v _EEADR7 `Vb ~T0 @X0 1 e@2159 ]
+[; ;cms79f726.h: 409: volatile bit EEADR7 @ ((unsigned)&EEADR*8)+7;
+"410
+[v _EEADR6 `Vb ~T0 @X0 1 e@2158 ]
+[; ;cms79f726.h: 410: volatile bit EEADR6 @ ((unsigned)&EEADR*8)+6;
+"411
+[v _EEADR5 `Vb ~T0 @X0 1 e@2157 ]
+[; ;cms79f726.h: 411: volatile bit EEADR5 @ ((unsigned)&EEADR*8)+5;
+"412
+[v _EEADR4 `Vb ~T0 @X0 1 e@2156 ]
+[; ;cms79f726.h: 412: volatile bit EEADR4 @ ((unsigned)&EEADR*8)+4;
+"413
+[v _EEADR3 `Vb ~T0 @X0 1 e@2155 ]
+[; ;cms79f726.h: 413: volatile bit EEADR3 @ ((unsigned)&EEADR*8)+3;
+"414
+[v _EEADR2 `Vb ~T0 @X0 1 e@2154 ]
+[; ;cms79f726.h: 414: volatile bit EEADR2 @ ((unsigned)&EEADR*8)+2;
+"415
+[v _EEADR1 `Vb ~T0 @X0 1 e@2153 ]
+[; ;cms79f726.h: 415: volatile bit EEADR1 @ ((unsigned)&EEADR*8)+1;
+"416
+[v _EEADR0 `Vb ~T0 @X0 1 e@2152 ]
+[; ;cms79f726.h: 416: volatile bit EEADR0 @ ((unsigned)&EEADR*8)+0;
+"420
+[v _EEDATH7 `Vb ~T0 @X0 1 e@2167 ]
+[; ;cms79f726.h: 420: volatile bit EEDATH7 @ ((unsigned)&EEDATH*8)+7;
+"421
+[v _EEDATH6 `Vb ~T0 @X0 1 e@2166 ]
+[; ;cms79f726.h: 421: volatile bit EEDATH6 @ ((unsigned)&EEDATH*8)+6;
+"422
+[v _EEDATH5 `Vb ~T0 @X0 1 e@2165 ]
+[; ;cms79f726.h: 422: volatile bit EEDATH5 @ ((unsigned)&EEDATH*8)+5;
+"423
+[v _EEDATH4 `Vb ~T0 @X0 1 e@2164 ]
+[; ;cms79f726.h: 423: volatile bit EEDATH4 @ ((unsigned)&EEDATH*8)+4;
+"424
+[v _EEDATH3 `Vb ~T0 @X0 1 e@2163 ]
+[; ;cms79f726.h: 424: volatile bit EEDATH3 @ ((unsigned)&EEDATH*8)+3;
+"425
+[v _EEDATH2 `Vb ~T0 @X0 1 e@2162 ]
+[; ;cms79f726.h: 425: volatile bit EEDATH2 @ ((unsigned)&EEDATH*8)+2;
+"426
+[v _EEDATH1 `Vb ~T0 @X0 1 e@2161 ]
+[; ;cms79f726.h: 426: volatile bit EEDATH1 @ ((unsigned)&EEDATH*8)+1;
+"427
+[v _EEDATH0 `Vb ~T0 @X0 1 e@2160 ]
+[; ;cms79f726.h: 427: volatile bit EEDATH0 @ ((unsigned)&EEDATH*8)+0;
+"431
+[v _EEADRH4 `Vb ~T0 @X0 1 e@2172 ]
+[; ;cms79f726.h: 431: volatile bit EEADRH4 @ ((unsigned)&EEADRH*8)+4;
+"432
+[v _EEADRH3 `Vb ~T0 @X0 1 e@2171 ]
+[; ;cms79f726.h: 432: volatile bit EEADRH3 @ ((unsigned)&EEADRH*8)+3;
+"433
+[v _EEADRH2 `Vb ~T0 @X0 1 e@2170 ]
+[; ;cms79f726.h: 433: volatile bit EEADRH2 @ ((unsigned)&EEADRH*8)+2;
+"434
+[v _EEADRH1 `Vb ~T0 @X0 1 e@2169 ]
+[; ;cms79f726.h: 434: volatile bit EEADRH1 @ ((unsigned)&EEADRH*8)+1;
+"435
+[v _EEADRH0 `Vb ~T0 @X0 1 e@2168 ]
+[; ;cms79f726.h: 435: volatile bit EEADRH0 @ ((unsigned)&EEADRH*8)+0;
+"439
+[v _SEG_ISEL3 `Vb ~T0 @X0 1 e@2203 ]
+[; ;cms79f726.h: 439: volatile bit SEG_ISEL3 @ ((unsigned)&SEGCUR*8)+3;
+"440
+[v _SEG_ISEL2 `Vb ~T0 @X0 1 e@2202 ]
+[; ;cms79f726.h: 440: volatile bit SEG_ISEL2 @ ((unsigned)&SEGCUR*8)+2;
+"441
+[v _SEG_ISEL1 `Vb ~T0 @X0 1 e@2201 ]
+[; ;cms79f726.h: 441: volatile bit SEG_ISEL1 @ ((unsigned)&SEGCUR*8)+1;
+"442
+[v _SEG_ISEL0 `Vb ~T0 @X0 1 e@2200 ]
+[; ;cms79f726.h: 442: volatile bit SEG_ISEL0 @ ((unsigned)&SEGCUR*8)+0;
+"446
+[v _PALEN7 `Vb ~T0 @X0 1 e@2215 ]
+[; ;cms79f726.h: 446: volatile bit PALEN7 @ ((unsigned)&PALEN*8)+7;
+"447
+[v _PALEN6 `Vb ~T0 @X0 1 e@2214 ]
+[; ;cms79f726.h: 447: volatile bit PALEN6 @ ((unsigned)&PALEN*8)+6;
+"448
+[v _PALEN5 `Vb ~T0 @X0 1 e@2213 ]
+[; ;cms79f726.h: 448: volatile bit PALEN5 @ ((unsigned)&PALEN*8)+5;
+"449
+[v _PALEN4 `Vb ~T0 @X0 1 e@2212 ]
+[; ;cms79f726.h: 449: volatile bit PALEN4 @ ((unsigned)&PALEN*8)+4;
+"450
+[v _PALEN3 `Vb ~T0 @X0 1 e@2211 ]
+[; ;cms79f726.h: 450: volatile bit PALEN3 @ ((unsigned)&PALEN*8)+3;
+"451
+[v _PALEN2 `Vb ~T0 @X0 1 e@2210 ]
+[; ;cms79f726.h: 451: volatile bit PALEN2 @ ((unsigned)&PALEN*8)+2;
+"452
+[v _PALEN1 `Vb ~T0 @X0 1 e@2209 ]
+[; ;cms79f726.h: 452: volatile bit PALEN1 @ ((unsigned)&PALEN*8)+1;
+"453
+[v _PALEN0 `Vb ~T0 @X0 1 e@2208 ]
+[; ;cms79f726.h: 453: volatile bit PALEN0 @ ((unsigned)&PALEN*8)+0;
+"457
+[v _PBLEN7 `Vb ~T0 @X0 1 e@2223 ]
+[; ;cms79f726.h: 457: volatile bit PBLEN7 @ ((unsigned)&PBLEN*8)+7;
+"458
+[v _PBLEN6 `Vb ~T0 @X0 1 e@2222 ]
+[; ;cms79f726.h: 458: volatile bit PBLEN6 @ ((unsigned)&PBLEN*8)+6;
+"459
+[v _PBLEN5 `Vb ~T0 @X0 1 e@2221 ]
+[; ;cms79f726.h: 459: volatile bit PBLEN5 @ ((unsigned)&PBLEN*8)+5;
+"460
+[v _PBLEN4 `Vb ~T0 @X0 1 e@2220 ]
+[; ;cms79f726.h: 460: volatile bit PBLEN4 @ ((unsigned)&PBLEN*8)+4;
+"461
+[v _PBLEN3 `Vb ~T0 @X0 1 e@2219 ]
+[; ;cms79f726.h: 461: volatile bit PBLEN3 @ ((unsigned)&PBLEN*8)+3;
+"462
+[v _PBLEN2 `Vb ~T0 @X0 1 e@2218 ]
+[; ;cms79f726.h: 462: volatile bit PBLEN2 @ ((unsigned)&PBLEN*8)+2;
+"463
+[v _PBLEN1 `Vb ~T0 @X0 1 e@2217 ]
+[; ;cms79f726.h: 463: volatile bit PBLEN1 @ ((unsigned)&PBLEN*8)+1;
+"464
+[v _PBLEN0 `Vb ~T0 @X0 1 e@2216 ]
+[; ;cms79f726.h: 464: volatile bit PBLEN0 @ ((unsigned)&PBLEN*8)+0;
+"468
+[v _PAHEN7 `Vb ~T0 @X0 1 e@2231 ]
+[; ;cms79f726.h: 468: volatile bit PAHEN7 @ ((unsigned)&PAHEN*8)+7;
+"469
+[v _PAHEN6 `Vb ~T0 @X0 1 e@2230 ]
+[; ;cms79f726.h: 469: volatile bit PAHEN6 @ ((unsigned)&PAHEN*8)+6;
+"470
+[v _PAHEN5 `Vb ~T0 @X0 1 e@2229 ]
+[; ;cms79f726.h: 470: volatile bit PAHEN5 @ ((unsigned)&PAHEN*8)+5;
+"471
+[v _PAHEN4 `Vb ~T0 @X0 1 e@2228 ]
+[; ;cms79f726.h: 471: volatile bit PAHEN4 @ ((unsigned)&PAHEN*8)+4;
+"472
+[v _PAHEN3 `Vb ~T0 @X0 1 e@2227 ]
+[; ;cms79f726.h: 472: volatile bit PAHEN3 @ ((unsigned)&PAHEN*8)+3;
+"473
+[v _PAHEN2 `Vb ~T0 @X0 1 e@2226 ]
+[; ;cms79f726.h: 473: volatile bit PAHEN2 @ ((unsigned)&PAHEN*8)+2;
+"474
+[v _PAHEN1 `Vb ~T0 @X0 1 e@2225 ]
+[; ;cms79f726.h: 474: volatile bit PAHEN1 @ ((unsigned)&PAHEN*8)+1;
+"475
+[v _PAHEN0 `Vb ~T0 @X0 1 e@2224 ]
+[; ;cms79f726.h: 475: volatile bit PAHEN0 @ ((unsigned)&PAHEN*8)+0;
+"479
+[v _PBHEN7 `Vb ~T0 @X0 1 e@2239 ]
+[; ;cms79f726.h: 479: volatile bit PBHEN7 @ ((unsigned)&PBHEN*8)+7;
+"480
+[v _PBHEN6 `Vb ~T0 @X0 1 e@2238 ]
+[; ;cms79f726.h: 480: volatile bit PBHEN6 @ ((unsigned)&PBHEN*8)+6;
+"481
+[v _PBHEN5 `Vb ~T0 @X0 1 e@2237 ]
+[; ;cms79f726.h: 481: volatile bit PBHEN5 @ ((unsigned)&PBHEN*8)+5;
+"482
+[v _PBHEN4 `Vb ~T0 @X0 1 e@2236 ]
+[; ;cms79f726.h: 482: volatile bit PBHEN4 @ ((unsigned)&PBHEN*8)+4;
+"483
+[v _PBHEN3 `Vb ~T0 @X0 1 e@2235 ]
+[; ;cms79f726.h: 483: volatile bit PBHEN3 @ ((unsigned)&PBHEN*8)+3;
+"484
+[v _PBHEN2 `Vb ~T0 @X0 1 e@2234 ]
+[; ;cms79f726.h: 484: volatile bit PBHEN2 @ ((unsigned)&PBHEN*8)+2;
+"485
+[v _PBHEN1 `Vb ~T0 @X0 1 e@2233 ]
+[; ;cms79f726.h: 485: volatile bit PBHEN1 @ ((unsigned)&PBHEN*8)+1;
+"486
+[v _PBHEN0 `Vb ~T0 @X0 1 e@2232 ]
+[; ;cms79f726.h: 486: volatile bit PBHEN0 @ ((unsigned)&PBHEN*8)+0;
+"490
+[v _EEPGD `Vb ~T0 @X0 1 e@2271 ]
+[; ;cms79f726.h: 490: volatile bit EEPGD @ ((unsigned)&EECON1*8)+7;
+"491
+[v _EETIME1 `Vb ~T0 @X0 1 e@2269 ]
+[; ;cms79f726.h: 491: volatile bit EETIME1 @ ((unsigned)&EECON1*8)+5;
+"492
+[v _EETIME0 `Vb ~T0 @X0 1 e@2268 ]
+[; ;cms79f726.h: 492: volatile bit EETIME0 @ ((unsigned)&EECON1*8)+4;
+"493
+[v _WRERR `Vb ~T0 @X0 1 e@2267 ]
+[; ;cms79f726.h: 493: volatile bit WRERR @ ((unsigned)&EECON1*8)+3;
+"494
+[v _WREN `Vb ~T0 @X0 1 e@2266 ]
+[; ;cms79f726.h: 494: volatile bit WREN @ ((unsigned)&EECON1*8)+2;
+"495
+[v _WR `Vb ~T0 @X0 1 e@2265 ]
+[; ;cms79f726.h: 495: volatile bit WR @ ((unsigned)&EECON1*8)+1;
+"496
+[v _RD `Vb ~T0 @X0 1 e@2264 ]
+[; ;cms79f726.h: 496: volatile bit RD @ ((unsigned)&EECON1*8)+0;
+[; ;cms.h: 28: extern void __nop(void);
+[; ;cms.h: 76: extern unsigned int flash_read(unsigned short addr);
+[; ;cms.h: 150: extern __nonreentrant void _delay(unsigned long);
+[; ;cms.h: 184: extern unsigned char __resetbits;
+[; ;cms.h: 185: extern __bit __powerdown;
+[; ;cms.h: 186: extern __bit __timeout;
+[; ;StepMotor.h: 13: extern unsigned char Dir;
+[; ;StepMotor.h: 14: extern unsigned char State;
+[; ;StepMotor.h: 16: void InitStepMotor(void);
+[; ;StepMotor.h: 17: void StepMotor(unsigned char stepIndex, unsigned char Dir);
+[; ;StepMotor.h: 18: void SetStep(unsigned char step);
+[; ;StepMotor.h: 19: void StepMotorRun();
+[; ;StepMotor.h: 20: void StepMotorControl();
+"4 D:\Homework\laptop\Homework\Ç¶ÈëÊ½\warmFan_finish\StepMotor.c
+[v _i `ui ~T0 @X0 1 e ]
+[i _i
+-> -> 0 `i `ui
+]
+[; ;StepMotor.c: 4: unsigned int i = 0;
+"5
+[v _Dir `uc ~T0 @X0 1 e ]
+[i _Dir
+-> -> 0 `i `uc
+]
+[; ;StepMotor.c: 5: unsigned char Dir = 0;
+"6
+[v _StepCount `ui ~T0 @X0 1 e ]
+[i _StepCount
+-> -> 0 `i `ui
+]
+[; ;StepMotor.c: 6: unsigned int StepCount = 0;
+"7
+[v _stepMax `ui ~T0 @X0 1 e ]
+[i _stepMax
+-> -> 2048 `i `ui
+]
+[; ;StepMotor.c: 7: unsigned int stepMax = 2048;
+"8
+[v _State `uc ~T0 @X0 1 e ]
+[i _State
+-> -> 0 `i `uc
+]
+[; ;StepMotor.c: 8: unsigned char State = 0;
+[; ;StepMotor.c: 10: void Delay_nms (unsigned int inittempl);
+"13
+[v _StepTable_L `Cuc ~T0 @X0 -> 4 `i e ]
+[i _StepTable_L
+:U ..
+"14
+-> -> 128 `i `uc
+"15
+-> -> 128 `i `uc
+"16
+-> -> 64 `i `uc
+"18
+-> -> 32 `i `uc
+..
+]
+[; ;StepMotor.c: 13: const unsigned char StepTable_L[4] = {
+[; ;StepMotor.c: 14: 0B10000000,
+[; ;StepMotor.c: 15: 0B10000000,
+[; ;StepMotor.c: 16: 0B01000000,
+[; ;StepMotor.c: 17: 0B00100000
+[; ;StepMotor.c: 18: };
+"21
+[v _StepTable_R `Cuc ~T0 @X0 -> 4 `i e ]
+[i _StepTable_R
+:U ..
+"22
+-> -> 32 `i `uc
+"23
+-> -> 64 `i `uc
+"24
+-> -> 128 `i `uc
+"26
+-> -> 128 `i `uc
+..
+]
+[; ;StepMotor.c: 21: const unsigned char StepTable_R[4] = {
+[; ;StepMotor.c: 22: 0B00100000,
+[; ;StepMotor.c: 23: 0B01000000,
+[; ;StepMotor.c: 24: 0B10000000,
+[; ;StepMotor.c: 25: 0B10000000
+[; ;StepMotor.c: 26: };
+"29
+[v _InitStepMotor `(v ~T0 @X0 1 ef ]
+{
+[; ;StepMotor.c: 29: void InitStepMotor(void) {
+[e :U _InitStepMotor ]
+[f ]
+[; ;StepMotor.c: 31: TRISA &= ~((1<<5)|(1<<6)|(1<<7));
+"31
+[e =& _TRISA -> ~ | | << -> 1 `i -> 5 `i << -> 1 `i -> 6 `i << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 32: TRISB &= ~(1<<7);
+"32
+[e =& _TRISB -> ~ << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 34: PORTA &= ~((1<<5)|(1<<6)|(1<<7));
+"34
+[e =& _PORTA -> ~ | | << -> 1 `i -> 5 `i << -> 1 `i -> 6 `i << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 35: PORTB &= ~(1<<7);
+"35
+[e =& _PORTB -> ~ << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 36: }
+"36
+[e :UE 1 ]
+}
+"39
+[v _SetStep `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;StepMotor.c: 39: void SetStep(unsigned char step) {
+[e :U _SetStep ]
+[v _step `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;StepMotor.c: 41: PORTA &= ~((1<<5)|(1<<6)|(1<<7));
+"41
+[e =& _PORTA -> ~ | | << -> 1 `i -> 5 `i << -> 1 `i -> 6 `i << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 42: PORTB &= ~(1<<7);
+"42
+[e =& _PORTB -> ~ << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 44: PORTA |= (step & ((1<<7)|(1<<6)|(1<<5)));
+"44
+[e =| _PORTA -> & -> _step `i | | << -> 1 `i -> 7 `i << -> 1 `i -> 6 `i << -> 1 `i -> 5 `i `uc ]
+[; ;StepMotor.c: 45: PORTB |= (step & (1<<7));
+"45
+[e =| _PORTB -> & -> _step `i << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 46: }
+"46
+[e :UE 2 ]
+}
+"49
+[v _StepMotor `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[; ;StepMotor.c: 49: void StepMotor(unsigned char stepIndex, unsigned char Dir) {
+[e :U _StepMotor ]
+[v _stepIndex `uc ~T0 @X0 1 r1 ]
+[v _Dir `uc ~T0 @X0 1 r2 ]
+[f ]
+[; ;StepMotor.c: 50: switch (Dir) {
+"50
+[e $U 5  ]
+{
+[; ;StepMotor.c: 51: case 0:
+"51
+[e :U 6 ]
+[; ;StepMotor.c: 52: SetStep(StepTable_L[stepIndex % 4]);
+"52
+[e ( _SetStep (1 *U + &U _StepTable_L * -> -> % -> _stepIndex `i -> 4 `i `ui `ux -> -> # *U &U _StepTable_L `ui `ux ]
+[; ;StepMotor.c: 53: break;
+"53
+[e $U 4  ]
+[; ;StepMotor.c: 54: case 1:
+"54
+[e :U 7 ]
+[; ;StepMotor.c: 55: SetStep(StepTable_R[stepIndex % 4]);
+"55
+[e ( _SetStep (1 *U + &U _StepTable_R * -> -> % -> _stepIndex `i -> 4 `i `ui `ux -> -> # *U &U _StepTable_R `ui `ux ]
+[; ;StepMotor.c: 56: break;
+"56
+[e $U 4  ]
+"57
+}
+[; ;StepMotor.c: 57: }
+[e $U 4  ]
+"50
+[e :U 5 ]
+[e [\ _Dir , $ -> -> 0 `i `uc 6
+ , $ -> -> 1 `i `uc 7
+ 4 ]
+"57
+[e :U 4 ]
+[; ;StepMotor.c: 58: }
+"58
+[e :UE 3 ]
+}
+"61
+[v _SwitchDir `(v ~T0 @X0 1 ef ]
+{
+[; ;StepMotor.c: 61: void SwitchDir() {
+[e :U _SwitchDir ]
+[f ]
+[; ;StepMotor.c: 62: StepCount++;
+"62
+[e ++ _StepCount -> -> 1 `i `ui ]
+[; ;StepMotor.c: 63: if(StepCount >= stepMax) {
+"63
+[e $ ! >= _StepCount _stepMax 9  ]
+{
+[; ;StepMotor.c: 64: StepCount = 0;
+"64
+[e = _StepCount -> -> 0 `i `ui ]
+[; ;StepMotor.c: 65: Dir = !Dir;
+"65
+[e = _Dir -> -> ! != -> _Dir `i -> -> -> 0 `i `uc `i `i `uc ]
+"66
+}
+[e :U 9 ]
+[; ;StepMotor.c: 66: }
+[; ;StepMotor.c: 67: }
+"67
+[e :UE 8 ]
+}
+"70
+[v _StepMotorRun `(v ~T0 @X0 1 ef ]
+{
+[; ;StepMotor.c: 70: void StepMotorRun() {
+[e :U _StepMotorRun ]
+[f ]
+[; ;StepMotor.c: 71: StepMotor(i++, Dir);
+"71
+[e ( _StepMotor (2 , -> ++ _i -> -> 1 `i `ui `uc _Dir ]
+[; ;StepMotor.c: 72: if(i >= 4) i = 0;
+"72
+[e $ ! >= _i -> -> 4 `i `ui 11  ]
+[e = _i -> -> 0 `i `ui ]
+[e :U 11 ]
+[; ;StepMotor.c: 73: SwitchDir();
+"73
+[e ( _SwitchDir ..  ]
+[; ;StepMotor.c: 74: }
+"74
+[e :UE 10 ]
+}
+"77
+[v _StepMotorControl `(v ~T0 @X0 1 ef ]
+{
+[; ;StepMotor.c: 77: void StepMotorControl() {
+[e :U _StepMotorControl ]
+[f ]
+[; ;StepMotor.c: 78: if(State == 1) {
+"78
+[e $ ! == -> _State `i -> 1 `i 13  ]
+{
+[; ;StepMotor.c: 79: StepMotorRun();
+"79
+[e ( _StepMotorRun ..  ]
+"80
+}
+[; ;StepMotor.c: 80: }
+[e $U 14  ]
+"81
+[e :U 13 ]
+[; ;StepMotor.c: 81: else {
+{
+[; ;StepMotor.c: 82: PORTA &= ~((1<<5)|(1<<6)|(1<<7));
+"82
+[e =& _PORTA -> ~ | | << -> 1 `i -> 5 `i << -> 1 `i -> 6 `i << -> 1 `i -> 7 `i `uc ]
+[; ;StepMotor.c: 83: PORTB &= ~(1<<7);
+"83
+[e =& _PORTB -> ~ << -> 1 `i -> 7 `i `uc ]
+"84
+}
+[e :U 14 ]
+[; ;StepMotor.c: 84: }
+[; ;StepMotor.c: 85: }
+"85
+[e :UE 12 ]
+}

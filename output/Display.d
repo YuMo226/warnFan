@@ -1,0 +1,1 @@
+ Display.d  Display.p1:  D:/Homework/laptop/Homework/嵌入式/warmFan_finish/Display.c D:/Homework/laptop/Homework/嵌入式/warmFan_finish/Display.h

@@ -1,0 +1,2280 @@
+Microchip MPLAB XC8 Compiler V1.45 ()
+
+Linker command line:
+
+-W-9 --edf=C:\CMS_IDE_V2.03.21\data\dat\en_msgs.txt -cs -h+warmFan.sym \
+  --cmf=warmFan.cmf -z -Q79F726 -oC:\Users\27862\AppData\Local\Temp\sjnc.2 \
+  -MwarmFan.map -E1 -ver=XC8 -ASTACK=0A0h-0efh -pstack=STACK \
+  -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
+  -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
+  -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0120h-016Fh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0120h-016Fh -ASFR0=00h-01Fh -ASFR1=080h-09Fh \
+  -ASFR2=0100h-011Fh -ASFR3=0180h-01EFh \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -DCODE=2 -DSTRCODE=2 \
+  -DSTRING=2 -DCONST=2 -DENTRY=2 -k startup.obj warmFan.obj 
+
+Object code version is 3.11
+
+Machine type is 79F726
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+startup.obj     end_init                             12       12        3        8       0
+                reset_vec                             0        0        3        0       0
+warmFan.obj     cinit                                15       15        F        8       0
+                intentry                              4        4        E        8       0
+                text35                              EB0      EB0       42     1D60       0
+                text29                              E69      E69       1C     1CD2       0
+                text28                              E52      E52       17     1CA4       0
+                text27                               24       24      400        8       0
+                text25                              5E9      5E9      1B2        8       0
+                text22                              F76      F76       8A     1EEC       0
+                text19                              424      424      1C5        8       0
+                text18                              E1E      E1E        4     1C3C       0
+                text17                              E22      E22        4     1C44       0
+                text16                              E26      E26        5     1C4C       0
+                text15                              E2B      E2B        6     1C56       0
+                text14                              E38      E38        8     1C70       0
+                text13                              E48      E48        A     1C90       0
+                text12                              E85      E85       2B     1D0A       0
+                text11                              7F2      7F2        D        8       0
+                text10                              E31      E31        7     1C62       0
+                text5                               79B      79B       57        8       0
+                maintext                            EF2      EF2       84     1DE4       0
+                cstackBANK0                          45       45       18       20       1
+                cstackCOMMON                         70       70        E       70       1
+                clrtext                             E40      E40        8     1C80       0
+                bssBANK0                             20       20       25       20       1
+                bitbssBANK0                         2E8       5D        D       20       1     8
+                nvBANK0                              5F       5F        1       20       1
+                strings                             800      800       37     1000       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                             12       12        3         0
+                cinit                                15       15        F         0
+                intentry                              4        4        E         0
+                reset_vec                             0        0        3         0
+                text35                              EB0      EB0       42         0
+                text29                              E69      E69       1C         0
+                text28                              E52      E52       17         0
+                text27                               24       24      400         0
+                text25                              5E9      5E9      1B2         0
+                text22                              F76      F76       8A         0
+                text19                              424      424      1C5         0
+                text18                              E1E      E1E        4         0
+                text17                              E22      E22        4         0
+                text16                              E26      E26        5         0
+                text15                              E2B      E2B        6         0
+                text14                              E38      E38        8         0
+                text13                              E48      E48        A         0
+                text12                              E85      E85       2B         0
+                text11                              7F2      7F2        D         0
+                text10                              E31      E31        7         0
+                text5                               79B      79B       57         0
+                maintext                            EF2      EF2       84         0
+                clrtext                             E40      E40        8         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+                strings                             800      800       37         0
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        E         1
+
+        CLASS   BANK0          
+                cstackBANK0                          45       45       18         1
+                bssBANK0                             20       20       25         1
+                bitbssBANK0                         2E8       5D        D         1
+                nvBANK0                              5F       5F        1         1
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   BANK3          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                intentry                       000004  0007FB  0007FF         8       0  CODE        2
+                bssBANK0                       000020  000040  000060        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                strings                        000800  000037  000837      1000       0  STRING      2
+                text18                         000E1E  000004  000E22      1C3C       0  CODE        2
+                text17                         000E22  000004  000E26      1C44       0  CODE        2
+                text16                         000E26  000005  000E2B      1C4C       0  CODE        2
+                text15                         000E2B  000006  000E31      1C56       0  CODE        2
+                text10                         000E31  000007  000E38      1C62       0  CODE        2
+                text14                         000E38  000008  000E40      1C70       0  CODE        2
+                clrtext                        000E40  000008  000E48      1C80       0  CODE        2
+                text13                         000E48  00000A  000E52      1C90       0  CODE        2
+                text28                         000E52  000017  000E69      1CA4       0  CODE        2
+                text29                         000E69  00001C  000E85      1CD2       0  CODE        2
+                text12                         000E85  00002B  000EB0      1D0A       0  CODE        2
+                text35                         000EB0  000042  000EF2      1D60       0  CODE        2
+                maintext                       000EF2  000084  000F76      1DE4       0  CODE        2
+                text22                         000F76  00008A  001000      1EEC       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0060-006F             10           1
+        BANK1            00A0-00EF             50           1
+        BANK2            0120-016F             50           1
+        CODE             0003-0003              1           2
+                         07FF-07FF              1
+                         0837-0E1D            5E7
+                         1000-1FFF            800
+        CONFIG           2007-2008              2           2
+        CONST            0003-0003              1           2
+                         07FF-07FF              1
+                         0837-0E1D            100
+                         1000-1FFF            100
+        ENTRY            0003-0003              1           2
+                         07FF-07FF              1
+                         0837-0E1D            100
+                         1000-1FFF            100
+        IDLOC            2000-2003              4           2
+        RAM              0060-006F             10           1
+                         00A0-00EF             50
+                         0120-016F             50
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-011F             20           1
+        SFR3             0180-01EF             70           1
+        STACK            00A0-00EF             50           1
+        STRCODE          0003-0003              1           2
+                         07FF-07FF              1
+                         0837-0E1D            5E7
+                         1000-1FFF           1000
+        STRING           0003-0003              1           2
+                         07FF-07FF              1
+                         0837-0E1D            100
+                         1000-1FFF            100
+
+                                  Symbol Table
+
+Display_Clear@i                     cstackBANK0  0055
+Display_Refresh@current_src         cstackCOMMON 0074
+Display_Refresh@i                   cstackCOMMON 0075
+Display_Refresh@sinks               cstackCOMMON 0073
+Display_SetAux@aux_id               cstackBANK0  005B
+Display_SetAux@state                cstackBANK0  005A
+Display_SetDigit@digit_pos          cstackBANK0  005B
+Display_SetDigit@map                cstackBANK0  005C
+Display_SetDigit@num                cstackBANK0  005A
+Display_SetSegment@seg_code         cstackBANK0  0057
+Display_SetSegment@sink             cstackBANK0  0059
+Display_SetSegment@src              cstackBANK0  0058
+Display_SetSegment@state            cstackBANK0  0055
+Kscan@KeyOldFlag                    bssBANK0     002B
+Kscan@KeyOnOutput                   cstackBANK0  0055
+PL2                                 text27       0406
+PL4                                 text25       078C
+PL6                                 text25       0795
+PTC_SetDuty@dutyPercent             cstackBANK0  0059
+PTC_SetDuty@dutyRaw                 cstackBANK0  0057
+SetPin@mode                         cstackBANK0  0055
+SetPin@pin_idx                      cstackBANK0  0056
+SetStep@step                        cstackBANK0  0055
+StepMotor@Dir                       cstackBANK0  0056
+StepMotor@stepIndex                 cstackBANK0  0057
+TaskKey@lastKeyValue                bssBANK0     003D
+_CCP2CON                            (abs)        001D
+_CCPR2L                             (abs)        001B
+_CurAdjustSDfst                     bitbssBANK0  02EC
+_CurCheckOver                       bitbssBANK0  02ED
+_DIGIT_MAP                          strings      0806
+_Dir                                bssBANK0     003C
+_Dis_SC0                            bssBANK0     0044
+_Dis_SC1                            nvBANK0      005F
+_Display                            text25       0607
+_Display_Clear                      text22       0FF3
+_Display_Init                       text22       0F76
+_Display_Refresh                    text25       06D3
+_Display_SetAux                     text19       04DF
+_Display_SetDigit                   text19       0533
+_Display_SetSegment                 text19       05B3
+_Display_UpdateData                 text19       0424
+_FallDownState                      bssBANK0     0042
+_INTCON                             (abs)        000B
+_ISR                                text25       05E9
+_ITRIM_Ram                          (abs)        01A0
+_InitFallDown                       text18       0E1E
+_InitKey                            text17       0E22
+_InitMotor                          text16       0E26
+_InitPTC                            text15       0E2B
+_InitStepMotor                      text14       0E38
+_InitTimer2                         text13       0E48
+_IntCurStepTemp                     bssBANK0     0034
+_KeyAdrCnt                          bssBANK0     0036
+_KeyBaseCnt                         (abs)        01C0
+_KeyCounter                         (abs)        01E4
+_KeyFlag                            bssBANK0     002D
+_KeyHave                            (abs)        01C0
+_KeyMaxTemp                         (abs)        01D0
+_KeyMinTemp                         (abs)        01D2
+_KeyNosieC                          (abs)        01E0
+_KeyOldValue                        (abs)        01A0
+_KeyReference                       (abs)        01C0
+_KeySum                             (abs)        01A0
+_KeyUnusual                         (abs)        01D4
+_KeyUpShake                         (abs)        01B0
+_Kscan                              text12       0E85
+_OPTION_REG                         (abs)        0081
+_OSCCON                             (abs)        008F
+_PORTA                              (abs)        0005
+_PORTB                              (abs)        0006
+_PR2                                (abs)        0092
+_PTC_Init                           text11       07F2
+_PTC_SetDuty                        text19       050C
+_PWM_Count_Motor                    bssBANK0     003A
+_PWM_Count_PTC                      bssBANK0     0038
+_PWM_Ctr_Motor                      text25       0608
+_PWM_Ctr_PTC                        text25       0615
+_PWM_Duty_Motor                     bssBANK0     003B
+_PWM_Duty_PTC                       bssBANK0     0039
+_RA3                                (abs)        002B
+_RA4                                (abs)        002C
+_RAMCTRBack                         bssBANK0     0035
+_RB6                                (abs)        0036
+_ReadFallDown                       text10       0E31
+_SetPin                             text22       0F94
+_SetStep                            text5        07D3
+_State                              bssBANK0     003E
+_StepCount                          bssBANK0     0027
+_StepMotor                          text5        07B5
+_StepMotorControl                   text5        079B
+_StepMotorRun                       text5        07A2
+_StepTable_L                        strings      082A
+_StepTable_R                        strings      0826
+_SwingState                         bitbssBANK0  02F2
+_SwitchDir                          text5        07DE
+_SystemOn                           bitbssBANK0  02F4
+_System_Shutdown                    text19       042E
+_T2CON                              (abs)        0012
+_TMR2IE                             (abs)        0461
+_TMR2IF                             (abs)        0061
+_TRISA                              (abs)        0085
+_TRISA3                             (abs)        042B
+_TRISA4                             (abs)        042C
+_TRISB                              (abs)        0086
+_TRISB6                             (abs)        0436
+_Table_KeyChannel                   strings      082E
+_Table_KeyDown                      strings      0818
+_TaskKey                            text19       0455
+_TimeLimit                          (abs)        01D6
+_TimerVal                           bssBANK0     0043
+_WPUB6                              (abs)        04AE
+_WorkMode                           bitbssBANK0  02F3
+__Habs1                             abs1         0000
+__Hbank0                            bank0        0000
+__Hbank1                            bank1        0000
+__Hbank2                            bank2        0000
+__Hbank3                            bank3        0000
+__HbitbssBANK0                      bitbssBANK0  0000
+__HbssBANK0                         bssBANK0     0000
+__Hcinit                            cinit        0024
+__Hclrtext                          clrtext      0000
+__Hcode                             code         0000
+__Hcommon                           common       0000
+__Hconfig                           config       0000
+__HcstackBANK0                      cstackBANK0  0000
+__HcstackCOMMON                     cstackCOMMON 0000
+__Heeprom_data                      eeprom_data  0000
+__Hend_init                         end_init     0015
+__Hfunctab                          functab      0000
+__Hidloc                            idloc        0000
+__Hinit                             init         0012
+__Hintentry                         intentry     0012
+__Hmaintext                         maintext     0000
+__HnvBANK0                          nvBANK0      0000
+__Hpa_nodes0                        pa_nodes0    0000
+__Hpowerup                          powerup      0000
+__Hram                              ram          0000
+__Hreset_vec                        reset_vec    0003
+__Hsfr0                             sfr0         0000
+__Hsfr1                             sfr1         0000
+__Hsfr2                             sfr2         0000
+__Hsfr3                             sfr3         0000
+__Hspace_0                          (abs)        1000
+__Hspace_1                          (abs)        02F5
+__Hspace_2                          (abs)        0000
+__Hspace_3                          (abs)        0000
+__Hstack                            stack        0000
+__Hstrings                          strings      0000
+__Htext                             text         0000
+__Labs1                             abs1         0000
+__Lbank0                            bank0        0000
+__Lbank1                            bank1        0000
+__Lbank2                            bank2        0000
+__Lbank3                            bank3        0000
+__LbitbssBANK0                      bitbssBANK0  0000
+__LbssBANK0                         bssBANK0     0000
+__Lcinit                            cinit        0015
+__Lclrtext                          clrtext      0000
+__Lcode                             code         0000
+__Lcommon                           common       0000
+__Lconfig                           config       0000
+__LcstackBANK0                      cstackBANK0  0000
+__LcstackCOMMON                     cstackCOMMON 0000
+__Leeprom_data                      eeprom_data  0000
+__Lend_init                         end_init     0012
+__Lfunctab                          functab      0000
+__Lidloc                            idloc        0000
+__Linit                             init         0012
+__Lintentry                         intentry     0004
+__Lmaintext                         maintext     0000
+__LnvBANK0                          nvBANK0      0000
+__Lpa_nodes0                        pa_nodes0    0000
+__Lpowerup                          powerup      0000
+__Lram                              ram          0000
+__Lreset_vec                        reset_vec    0000
+__Lsfr0                             sfr0         0000
+__Lsfr1                             sfr1         0000
+__Lsfr2                             sfr2         0000
+__Lsfr3                             sfr3         0000
+__Lspace_0                          (abs)        0000
+__Lspace_1                          (abs)        0000
+__Lspace_2                          (abs)        0000
+__Lspace_3                          (abs)        0000
+__Lstack                            stack        0000
+__Lstrings                          strings      0000
+__Ltext                             text         0000
+__S0                                (abs)        1000
+__S1                                (abs)        007E
+__S2                                (abs)        0000
+___CMSNewRAM__                      (abs)        01A0
+___CMS_32M_CT                       (abs)        01E3
+___CMS_32M_Dat                      (abs)        01E2
+___CMS_CheckKeyOldValue             text27       0072
+___CMS_CheckKeyOldValue@KeyBase     cstackBANK0  004A
+___CMS_CheckKeyOldValue@KeyBaseLV   cstackBANK0  0045
+___CMS_CheckKeyOldValue@KeyOldTemp  cstackBANK0  004E
+___CMS_CheckKeyOldValue@KeyOneTemp  cstackBANK0  0047
+___CMS_CheckKeyOldValue@KeyTemp     cstackBANK0  004C
+___CMS_CheckKeyOldValue@VolValueOne cstackBANK0  0049
+___CMS_CheckKeyOldValue@cnt         cstackBANK0  0050
+___CMS_CheckOnceResult              text27       0122
+___CMS_CheckOnceResult@KHaveC       cstackBANK0  0049
+___CMS_CheckOnceResult@KHaveTemp    cstackBANK0  004A
+___CMS_CheckOnceResult@KeyBase      cstackBANK0  004B
+___CMS_CheckOnceResult@KeyDown      cstackBANK0  0045
+___CMS_CheckOnceResult@KeyDownF     bitbssBANK0  02EA
+___CMS_CheckOnceResult@KeyValue     cstackBANK0  0047
+___CMS_CheckOnceResult@cnt          cstackBANK0  004F
+___CMS_CheckOnceResult@flag         cstackBANK0  004E
+___CMS_CheckOnceResult@templ        cstackBANK0  004D
+___CMS_CheckTouchKey                text27       0024
+___CMS_CheckTouchKey@SDfst          bitbssBANK0  02E8
+___CMS_CheckValidTime               text27       0410
+___CMS_CheckValidTime@validtime     bssBANK0     0025
+___CMS_CurAdjMode                   text35       0EB0
+___CMS_CurAdjMode@CurStepTemp       cstackCOMMON 0070
+___CMS_CurAdjust                    text27       029A
+___CMS_CurAdjust@CurAdjLmtTimec     bssBANK0     0033
+___CMS_CurAdjust@KeySumTemp         cstackCOMMON 0073
+___CMS_CurAdjust@cnt                cstackCOMMON 0072
+___CMS_CurStep                      (abs)        01D0
+___CMS_CurStep_Table                strings      0820
+___CMS_GetTouchKeyValue             text25       0622
+___CMS_KDARGH                       (abs)        019E
+___CMS_KDARGL                       (abs)        019D
+___CMS_KDMAXH                       (abs)        019C
+___CMS_KDMAXL                       (abs)        019B
+___CMS_KDMINH                       (abs)        019A
+___CMS_KDMINL                       (abs)        0199
+___CMS_KEYCON0                      (abs)        0190
+___CMS_KEYCON1                      (abs)        0191
+___CMS_KEYCON2                      (abs)        0192
+___CMS_KEYCON3                      (abs)        0193
+___CMS_KEYCON4                      (abs)        0194
+___CMS_KEYCON5                      (abs)        0195
+___CMS_KEYCON6                      (abs)        0196
+___CMS_KEYCON7                      (abs)        0197
+___CMS_KEYCON8                      (abs)        0198
+___CMS_KEYSA                        (abs)        0185
+___CMS_KeyClearOne                  text27       0246
+___CMS_KeyClearOne@cnt              cstackCOMMON 0072
+___CMS_KeyDatIIR                    text27       031D
+___CMS_KeyDatIIR@TKDatTemp          cstackBANK0  0045
+___CMS_KeyDatIIR@TKOldTemp          cstackBANK0  0047
+___CMS_KeyDatIIR@cnt                cstackBANK0  0049
+___CMS_KeyHaveDown                  text27       0222
+___CMS_KeyHaveDown@cnt              cstackCOMMON 0071
+___CMS_KeyHaveDown@flag             cstackCOMMON 0070
+___CMS_KeyIsIn                      text27       0234
+___CMS_KeyIsIn@cnt                  cstackCOMMON 0071
+___CMS_KeyIsIn@i                    cstackCOMMON 0070
+___CMS_KeyModeSet                   text27       027B
+___CMS_KeyModeSet@DLTempl           cstackCOMMON 0070
+___CMS_KeyOpen                      text27       0270
+___CMS_KeyOpen@cnt                  cstackCOMMON 0071
+___CMS_KeyOpen@flag                 cstackCOMMON 0070
+___CMS_KeyStopClear                 text27       038A
+___CMS_KeyStopClear@i               cstackCOMMON 0073
+___CMS_Key_UNNOL_Check              text27       0399
+___CMS_Key_UNNOL_Check@UnNolFlag    cstackCOMMON 0073
+___CMS_Key_UNNOL_Check@UnNolOver    bitbssBANK0  02E9
+___CMS_Key_UNNOL_Check@UnNolSec     bssBANK0     0032
+___CMS_Key_UNNOL_Check@UnNolTime    bssBANK0     0031
+___CMS_Key_UNNOL_Check@cnt          cstackCOMMON 0074
+___CMS_NewRAMClr                    text29       0E69
+___CMS_NewRAMClr@i                  cstackCOMMON 0070
+___CMS_RAMCTR                       (abs)        019F
+___CMS_Table_KeyFalg                strings      0810
+___GET_32M_FREDAT                   text28       0E52
+___int_sp                           stack        0000
+___latbits                          (abs)        0002
+___sp                               stack        0000
+__end_ofPL2                         text27       0410
+__end_ofPL4                         text25       0795
+__end_ofPL6                         text25       079B
+__end_of_CmBase                     strings      0835
+__end_of_DIGIT_MAP                  strings      0810
+__end_of_Display                    text25       0608
+__end_of_Display_Clear              text22       1000
+__end_of_Display_Init               text22       0F94
+__end_of_Display_Refresh            text25       071E
+__end_of_Display_SetAux             text19       050C
+__end_of_Display_SetDigit           text19       05B3
+__end_of_Display_SetSegment         text19       05E9
+__end_of_Display_UpdateData         text19       042E
+__end_of_ISR                        text25       0607
+__end_of_InitFallDown               text18       0E22
+__end_of_InitKey                    text17       0E26
+__end_of_InitMotor                  text16       0E2B
+__end_of_InitPTC                    text15       0E31
+__end_of_InitStepMotor              text14       0E40
+__end_of_InitTimer2                 text13       0E52
+__end_of_KeyShakeCounter            strings      0837
+__end_of_Key_LDOSel                 strings      0833
+__end_of_Kscan                      text12       0EB0
+__end_of_LMDValue                   strings      0834
+__end_of_PTC_Init                   text11       07FF
+__end_of_PTC_SetDuty                text19       0533
+__end_of_PWM_Ctr_Motor              text25       0615
+__end_of_PWM_Ctr_PTC                text25       0622
+__end_of_ReadFallDown               text10       0E38
+__end_of_SetPin                     text22       0FF3
+__end_of_SetStep                    text5        07DE
+__end_of_StepMotor                  text5        07D3
+__end_of_StepMotorControl           text5        07A2
+__end_of_StepMotorRun               text5        07B5
+__end_of_StepTable_L                strings      082E
+__end_of_StepTable_R                strings      082A
+__end_of_SwitchDir                  text5        07F2
+__end_of_System_Shutdown            text19       0455
+__end_of_Table_KeyChannel           strings      0832
+__end_of_Table_KeyDown              strings      0820
+__end_of_TaskKey                    text19       04DF
+__end_of_VolValue                   strings      0836
+__end_of___CMS_CheckKeyOldValue     text27       0122
+__end_of___CMS_CheckOnceResult      text27       0222
+__end_of___CMS_CheckTouchKey        text27       0072
+__end_of___CMS_CheckValidTime       text27       0424
+__end_of___CMS_CurAdjMode           text35       0EF2
+__end_of___CMS_CurAdjust            text27       031D
+__end_of___CMS_CurStep_Table        strings      0826
+__end_of___CMS_GetTouchKeyValue     text25       06D3
+__end_of___CMS_KeyClearOne          text27       0270
+__end_of___CMS_KeyDatIIR            text27       038A
+__end_of___CMS_KeyHaveDown          text27       0234
+__end_of___CMS_KeyIsIn              text27       0246
+__end_of___CMS_KeyModeSet           text27       029A
+__end_of___CMS_KeyOpen              text27       027B
+__end_of___CMS_KeyStopClear         text27       0399
+__end_of___CMS_Key_UNNOL_Check      text27       0406
+__end_of___CMS_NewRAMClr            text29       0E85
+__end_of___CMS_Table_KeyFalg        strings      0818
+__end_of___GET_32M_FREDAT           text28       0E69
+__end_of__initialization            cinit        0020
+__end_of__stringtab                 strings      0806
+__end_of_main                       maintext     0F76
+__end_ofi1_SetPin                   text25       078C
+__initialization                    cinit        0015
+__pbitbssBANK0                      bitbssBANK0  02E8
+__pbssBANK0                         bssBANK0     0020
+__pcstackBANK0                      cstackBANK0  0045
+__pcstackCOMMON                     cstackCOMMON 0070
+__pintentry                         intentry     0004
+__pmaintext                         maintext     0EF2
+__pnvBANK0                          nvBANK0      005F
+__pstrings                          strings      0800
+__ptext1                            text19       0455
+__ptext10                           text10       0E31
+__ptext11                           text11       07F2
+__ptext12                           text12       0E85
+__ptext13                           text13       0E48
+__ptext14                           text14       0E38
+__ptext15                           text15       0E2B
+__ptext16                           text16       0E26
+__ptext17                           text17       0E22
+__ptext18                           text18       0E1E
+__ptext19                           text19       0424
+__ptext2                            text19       042E
+__ptext20                           text19       0533
+__ptext21                           text19       05B3
+__ptext22                           text22       0F76
+__ptext23                           text22       0F94
+__ptext24                           text22       0FF3
+__ptext25                           text25       05E9
+__ptext26                           text25       0622
+__ptext27                           text27       0024
+__ptext28                           text28       0E52
+__ptext29                           text29       0E69
+__ptext3                            text19       050C
+__ptext30                           text27       0399
+__ptext31                           text27       038A
+__ptext32                           text27       031D
+__ptext33                           text27       029A
+__ptext34                           text27       027B
+__ptext35                           text35       0EB0
+__ptext36                           text27       0410
+__ptext37                           text27       0122
+__ptext38                           text27       0270
+__ptext39                           text27       0222
+__ptext4                            text19       04DF
+__ptext40                           text27       0246
+__ptext41                           text27       0072
+__ptext42                           text27       0234
+__ptext43                           text25       0615
+__ptext44                           text25       0608
+__ptext45                           text25       0607
+__ptext46                           text25       06D3
+__ptext47                           text25       071E
+__ptext5                            text5        079B
+__ptext6                            text5        07A2
+__ptext7                            text5        07DE
+__ptext8                            text5        07B5
+__ptext9                            text5        07D3
+__size_of_Display                   (abs)        0000
+__size_of_Display_Clear             (abs)        0000
+__size_of_Display_Init              (abs)        0000
+__size_of_Display_Refresh           (abs)        0000
+__size_of_Display_SetAux            (abs)        0000
+__size_of_Display_SetDigit          (abs)        0000
+__size_of_Display_SetSegment        (abs)        0000
+__size_of_Display_UpdateData        (abs)        0000
+__size_of_ISR                       (abs)        0000
+__size_of_InitFallDown              (abs)        0000
+__size_of_InitKey                   (abs)        0000
+__size_of_InitMotor                 (abs)        0000
+__size_of_InitPTC                   (abs)        0000
+__size_of_InitStepMotor             (abs)        0000
+__size_of_InitTimer2                (abs)        0000
+__size_of_Kscan                     (abs)        0000
+__size_of_PTC_Init                  (abs)        0000
+__size_of_PTC_SetDuty               (abs)        0000
+__size_of_PWM_Ctr_Motor             (abs)        0000
+__size_of_PWM_Ctr_PTC               (abs)        0000
+__size_of_ReadFallDown              (abs)        0000
+__size_of_SetPin                    (abs)        0000
+__size_of_SetStep                   (abs)        0000
+__size_of_StepMotor                 (abs)        0000
+__size_of_StepMotorControl          (abs)        0000
+__size_of_StepMotorRun              (abs)        0000
+__size_of_SwitchDir                 (abs)        0000
+__size_of_System_Shutdown           (abs)        0000
+__size_of_TaskKey                   (abs)        0000
+__size_of___CMS_CheckKeyOldValue    (abs)        0000
+__size_of___CMS_CheckOnceResult     (abs)        0000
+__size_of___CMS_CheckTouchKey       (abs)        0000
+__size_of___CMS_CheckValidTime      (abs)        0000
+__size_of___CMS_CurAdjMode          (abs)        0000
+__size_of___CMS_CurAdjust           (abs)        0000
+__size_of___CMS_GetTouchKeyValue    (abs)        0000
+__size_of___CMS_KeyClearOne         (abs)        0000
+__size_of___CMS_KeyDatIIR           (abs)        0000
+__size_of___CMS_KeyHaveDown         (abs)        0000
+__size_of___CMS_KeyIsIn             (abs)        0000
+__size_of___CMS_KeyModeSet          (abs)        0000
+__size_of___CMS_KeyOpen             (abs)        0000
+__size_of___CMS_KeyStopClear        (abs)        0000
+__size_of___CMS_Key_UNNOL_Check     (abs)        0000
+__size_of___CMS_NewRAMClr           (abs)        0000
+__size_of___GET_32M_FREDAT          (abs)        0000
+__size_of_main                      (abs)        0000
+__size_ofi1_SetPin                  (abs)        0000
+__stringbase                        strings      0805
+__stringtab                         strings      0800
+_b_kerr                             bitbssBANK0  02EB
+_b_onceerr                          bitbssBANK0  02EE
+_b_over0                            bitbssBANK0  02F1
+_b_over1                            bitbssBANK0  02F0
+_b_over2                            bitbssBANK0  02EF
+_disp_buffer                        bssBANK0     0020
+_i                                  bssBANK0     0029
+_keyValue                           bssBANK0     003F
+_main                               maintext     0EF2
+_scan_idx                           bssBANK0     0037
+_tcount                             bssBANK0     0041
+btemp                               (abs)        007E
+clear_ram0                          clrtext      0E40
+end_of_initialization               cinit        0020
+i1SetPin@mode                       cstackCOMMON 0070
+i1SetPin@pin_idx                    cstackCOMMON 0071
+i1_SetPin                           text25       071E
+interrupt_function                  intentry     0004
+intlevel0                           functab      0000
+intlevel1                           functab      0000
+intlevel2                           functab      0000
+intlevel3                           functab      0000
+intlevel4                           functab      0000
+intlevel5                           functab      0000
+main@minute_cnt                     bssBANK0     002F
+main@sec_cnt                        bssBANK0     0040
+reset_vec                           reset_vec    0000
+saved_w                             (abs)        007E
+stackhi                             (abs)        0000
+stacklo                             (abs)        0000
+start                               init         0012
+start_initialization                cinit        0015
+wtemp0                              (abs)        007E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 36 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2  793[None  ] int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels required when called:    9
+ This function calls:
+		_Display_Init
+		_Display_UpdateData
+		_InitFallDown
+		_InitKey
+		_InitMotor
+		_InitPTC
+		_InitStepMotor
+		_InitTimer2
+		_Kscan
+		_PTC_Init
+		_ReadFallDown
+		_StepMotorControl
+		_System_Shutdown
+		_TaskKey
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _TaskKey *****************
+ Defined at:
+		line 34 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Task.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_Display_SetAux
+		_PTC_SetDuty
+		_System_Shutdown
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _System_Shutdown *****************
+ Defined at:
+		line 15 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Task.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_Display_SetAux
+		_PTC_SetDuty
+ This function is called by:
+		_main
+		_TaskKey
+ This function uses a non-reentrant model
+
+
+ *************** function _PTC_SetDuty *****************
+ Defined at:
+		line 44 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\ptc_driver.c"
+ Parameters:    Size  Location     Type
+  dutyPercent     1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  dutyPercent     1   20[BANK0 ] unsigned char 
+  dutyRaw         2   18[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       3       0       0
+      Temps:          0       2       0       0
+      Totals:         0       5       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_System_Shutdown
+		_TaskKey
+ This function uses a non-reentrant model
+
+
+ *************** function _Display_SetAux *****************
+ Defined at:
+		line 148 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+  aux_id          1    wreg     unsigned char 
+  state           1   21[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  aux_id          1   22[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       1       0       0
+      Locals:         0       1       0       0
+      Temps:          0       0       0       0
+      Totals:         0       2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_Display_SetSegment
+ This function is called by:
+		_System_Shutdown
+		_TaskKey
+ This function uses a non-reentrant model
+
+
+ *************** function _StepMotorControl *****************
+ Defined at:
+		line 77 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_StepMotorRun
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _StepMotorRun *****************
+ Defined at:
+		line 70 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_StepMotor
+		_SwitchDir
+ This function is called by:
+		_StepMotorControl
+ This function uses a non-reentrant model
+
+
+ *************** function _SwitchDir *****************
+ Defined at:
+		line 61 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_StepMotorRun
+ This function uses a non-reentrant model
+
+
+ *************** function _StepMotor *****************
+ Defined at:
+		line 49 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c"
+ Parameters:    Size  Location     Type
+  stepIndex       1    wreg     unsigned char 
+  Dir             1   17[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  stepIndex       1   18[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       1       0       0
+      Locals:         0       1       0       0
+      Temps:          0       0       0       0
+      Totals:         0       2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_SetStep
+ This function is called by:
+		_StepMotorRun
+ This function uses a non-reentrant model
+
+
+ *************** function _SetStep *****************
+ Defined at:
+		line 39 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c"
+ Parameters:    Size  Location     Type
+  step            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  step            1   16[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       1       0       0
+      Temps:          0       0       0       0
+      Totals:         0       1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_StepMotor
+ This function uses a non-reentrant model
+
+
+ *************** function _ReadFallDown *****************
+ Defined at:
+		line 15 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\FallDown.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _PTC_Init *****************
+ Defined at:
+		line 16 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\ptc_driver.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Kscan *****************
+ Defined at:
+		line 16 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Key.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  KeyOnOutput     2   16[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       2       0       0
+      Temps:          0       0       0       0
+      Totals:         0       2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _InitTimer2 *****************
+ Defined at:
+		line 29 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _InitStepMotor *****************
+ Defined at:
+		line 29 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _InitPTC *****************
+ Defined at:
+		line 16 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\PWM.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _InitMotor *****************
+ Defined at:
+		line 8 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\PWM.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _InitKey *****************
+ Defined at:
+		line 9 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Key.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _InitFallDown *****************
+ Defined at:
+		line 7 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\FallDown.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Display_UpdateData *****************
+ Defined at:
+		line 160 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_Display_SetDigit
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Display_SetDigit *****************
+ Defined at:
+		line 121 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+  digit_pos       1    wreg     unsigned char 
+  num             1   21[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  digit_pos       1   22[BANK0 ] unsigned char 
+  map             1   23[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       1       0       0
+      Locals:         0       2       0       0
+      Temps:          0       0       0       0
+      Totals:         0       3       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_Display_SetSegment
+ This function is called by:
+		_Display_UpdateData
+ This function uses a non-reentrant model
+
+
+ *************** function _Display_SetSegment *****************
+ Defined at:
+		line 83 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+  seg_code        1    wreg     unsigned char 
+  state           1   16[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  seg_code        1   18[BANK0 ] unsigned char 
+  sink            1   20[BANK0 ] unsigned char 
+  src             1   19[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       1       0       0
+      Locals:         0       3       0       0
+      Temps:          0       1       0       0
+      Totals:         0       5       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_Display_SetDigit
+		_Display_SetAux
+ This function uses a non-reentrant model
+
+
+ *************** function _Display_Init *****************
+ Defined at:
+		line 64 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_Display_Clear
+		_SetPin
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _SetPin *****************
+ Defined at:
+		line 33 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+  pin_idx         1    wreg     unsigned char 
+  mode            1   16[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  pin_idx         1   17[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       1       0       0
+      Locals:         0       1       0       0
+      Temps:          0       0       0       0
+      Totals:         0       2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_Display_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _Display_Clear *****************
+ Defined at:
+		line 76 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1   16[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       1       0       0
+      Temps:          0       0       0       0
+      Totals:         0       1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_Display_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _ISR *****************
+ Defined at:
+		line 17 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       4       0       0
+      Totals:         0       4       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_Display
+		_PWM_Ctr_Motor
+		_PWM_Ctr_PTC
+		___CMS_CheckTouchKey
+		___CMS_GetTouchKeyValue
+ This function is called by:
+		Interrupt level 1
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_GetTouchKeyValue *****************
+ Defined at:
+		line 371 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_CheckTouchKey *****************
+ Defined at:
+		line 895 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		___CMS_CheckKeyOldValue
+		___CMS_CheckOnceResult
+		___CMS_CheckValidTime
+		___CMS_CurAdjust
+		___CMS_KeyDatIIR
+		___CMS_KeyModeSet
+		___CMS_KeyStopClear
+		___CMS_Key_UNNOL_Check
+		___CMS_NewRAMClr
+		___GET_32M_FREDAT
+ This function is called by:
+		_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function ___GET_32M_FREDAT *****************
+ Defined at:
+		line 872 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_NewRAMClr *****************
+ Defined at:
+		line 855 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         1       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_Key_UNNOL_Check *****************
+ Defined at:
+		line 775 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  cnt             1    4[COMMON] unsigned char 
+  UnNolFlag       1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         2       0       0       0
+      Temps:          2       0       0       0
+      Totals:         4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		___CMS_KeyModeSet
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_KeyStopClear *****************
+ Defined at:
+		line 317 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         1       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		___CMS_KeyClearOne
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_KeyDatIIR *****************
+ Defined at:
+		line 831 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  TKOldTemp       2    2[BANK0 ] unsigned int 
+  TKDatTemp       2    0[BANK0 ] unsigned int 
+  cnt             1    4[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       5       0       0
+      Temps:         14       0       0       0
+      Totals:        14       5       0       0
+Total ram usage:       19 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_CurAdjust *****************
+ Defined at:
+		line 679 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  KeySumTemp      2    3[COMMON] unsigned int 
+  cnt             1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         3       0       0       0
+      Temps:          1       0       0       0
+      Totals:         4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___CMS_CurAdjMode
+		___CMS_KeyModeSet
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_KeyModeSet *****************
+ Defined at:
+		line 335 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  DLTempl         1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         1       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CurAdjust
+		___CMS_Key_UNNOL_Check
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_CurAdjMode *****************
+ Defined at:
+		line 651 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  CurStepTemp     1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         1       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CurAdjust
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_CheckValidTime *****************
+ Defined at:
+		line 623 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_CheckOnceResult *****************
+ Defined at:
+		line 464 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  KeyBase         2    6[BANK0 ] unsigned int 
+  KeyValue        2    2[BANK0 ] unsigned int 
+  KeyDown         2    0[BANK0 ] unsigned int 
+  cnt             1   10[BANK0 ] unsigned char 
+  flag            1    9[BANK0 ] unsigned char 
+  templ           1    8[BANK0 ] unsigned char 
+  KHaveTemp       1    5[BANK0 ] unsigned char 
+  KHaveC          1    4[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0      11       0       0
+      Temps:          5       0       0       0
+      Totals:         5      11       0       0
+Total ram usage:       16 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___CMS_KeyClearOne
+		___CMS_KeyHaveDown
+		___CMS_KeyIsIn
+		___CMS_KeyOpen
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_KeyOpen *****************
+ Defined at:
+		line 258 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+  cnt             1    wreg     unsigned char 
+  flag            1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  cnt             1    1[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         1       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CheckOnceResult
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_KeyHaveDown *****************
+ Defined at:
+		line 278 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+  cnt             1    wreg     unsigned char 
+  flag            1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  cnt             1    1[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         1       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CheckOnceResult
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_KeyClearOne *****************
+ Defined at:
+		line 298 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+  cnt             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  cnt             1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         1       0       0       0
+      Temps:          2       0       0       0
+      Totals:         3       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_KeyStopClear
+		___CMS_CheckOnceResult
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_CheckKeyOldValue *****************
+ Defined at:
+		line 557 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  KeyOldTemp      2    9[BANK0 ] unsigned int 
+  KeyTemp         2    7[BANK0 ] unsigned int 
+  KeyBase         2    5[BANK0 ] unsigned int 
+  KeyOneTemp      2    2[BANK0 ] unsigned int 
+  KeyBaseLV       2    0[BANK0 ] unsigned int 
+  cnt             1   11[BANK0 ] unsigned char 
+  VolValueOne     1    4[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0      12       0       0
+      Temps:          2       0       0       0
+      Totals:         2      12       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___CMS_KeyIsIn
+ This function is called by:
+		___CMS_CheckTouchKey
+ This function uses a non-reentrant model
+
+
+ *************** function ___CMS_KeyIsIn *****************
+ Defined at:
+		line 236 in file "G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c"
+ Parameters:    Size  Location     Type
+  cnt             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  cnt             1    1[COMMON] unsigned char 
+  i               1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         2       0       0       0
+      Temps:          0       0       0       0
+      Totals:         2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		___CMS_CheckOnceResult
+		___CMS_CheckKeyOldValue
+ This function uses a non-reentrant model
+
+
+ *************** function _PWM_Ctr_PTC *****************
+ Defined at:
+		line 38 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\PWM.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _PWM_Ctr_Motor *****************
+ Defined at:
+		line 26 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\PWM.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _Display *****************
+ Defined at:
+		line 166 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_Display_Refresh
+ This function is called by:
+		_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _Display_Refresh *****************
+ Defined at:
+		line 96 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    5[COMMON] unsigned char 
+  current_src     1    4[COMMON] unsigned char 
+  sinks           1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         3       0       0       0
+      Temps:          1       0       0       0
+      Totals:         4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		i1_SetPin
+ This function is called by:
+		_Display
+ This function uses a non-reentrant model
+
+
+ *************** function i1_SetPin *****************
+ Defined at:
+		line 33 in file "D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c"
+ Parameters:    Size  Location     Type
+  pin_idx         1    wreg     unsigned char 
+  mode            1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  pin_idx         1    1[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         1       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Display_Refresh
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\PWM.c
+		_PWM_Ctr_PTC   		CODE           	0615	0000	14
+		_PWM_Ctr_Motor 		CODE           	0608	0000	14
+		_InitPTC       		CODE           	0E2B	0000	7
+		_InitMotor     		CODE           	0E26	0000	6
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\PWM.c estimated size: 41
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Key.c
+		_InitKey       		CODE           	0E22	0000	5
+		_Kscan         		CODE           	0E85	0000	44
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Key.c estimated size: 49
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c
+		_Display_SetAux		CODE           	04DF	0000	46
+		_Display_UpdateData		CODE           	0424	0000	11
+		_Display_Refresh		CODE           	06D3	0000	76
+		_Display_SetSegment		CODE           	05B3	0000	55
+		_Display       		CODE           	0607	0000	2
+		_Display_Init  		CODE           	0F76	0000	31
+		_SetPin        		CODE           	0F94	0000	96
+		_Display_Clear 		CODE           	0FF3	0000	14
+		_Display_SetDigit		CODE           	0533	0000	129
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Display.c estimated size: 460
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\FallDown.c
+		_InitFallDown  		CODE           	0E1E	0000	5
+		_ReadFallDown  		CODE           	0E31	0000	8
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\FallDown.c estimated size: 13
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Task.c
+		_TaskKey       		CODE           	0455	0000	139
+		_System_Shutdown		CODE           	042E	0000	40
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\Task.c estimated size: 179
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\main.c
+		_ISR           		CODE           	05E9	0000	31
+		_InitTimer2    		CODE           	0E48	0000	11
+		_main          		CODE           	0EF2	0000	133
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\main.c estimated size: 175
+
+shared
+		___CMS_Table_KeyFalg		STRING         	0810	0000	9
+		__stringtab    		STRING         	0800	0000	7
+		_LMDValue      		STRING         	0000	0000	0
+		_Key_LDOSel    		STRING         	0000	0000	0
+		_Table_KeyChannel		STRING         	082E	0000	5
+		_Table_KeyDown 		STRING         	0818	0000	9
+		___CMS_CurStep_Table		STRING         	0820	0000	7
+		__initialization		CODE           	0015	0000	12
+		i1_SetPin      		CODE           	071E	0000	111
+		_StepTable_L   		STRING         	082A	0000	5
+		_StepTable_R   		STRING         	0826	0000	5
+		_VolValue      		STRING         	0000	0000	0
+		_DIGIT_MAP     		STRING         	0806	0000	11
+		_CmBase        		STRING         	0000	0000	0
+		_KeyShakeCounter		STRING         	0000	0000	0
+		PL2            		CODE           	0406	0000	11
+		PL4            		CODE           	078C	0000	10
+		PL6            		CODE           	0795	0000	7
+
+shared estimated size: 209
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c
+		_SetStep       		CODE           	07D3	0000	12
+		_InitStepMotor 		CODE           	0E38	0000	9
+		_SwitchDir     		CODE           	07DE	0000	21
+		_StepMotor     		CODE           	07B5	0000	31
+		_StepMotorRun  		CODE           	07A2	0000	20
+		_StepMotorControl		CODE           	079B	0000	8
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\StepMotor.c estimated size: 101
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\ptc_driver.c
+		_PTC_Init      		CODE           	07F2	0000	14
+		_PTC_SetDuty   		CODE           	050C	0000	40
+
+D:\Homework\laptop\Homework\嵌入式\warmFan_finish\ptc_driver.c estimated size: 54
+
+G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c
+		___CMS_CheckKeyOldValue		CODE           	0072	0000	177
+		___GET_32M_FREDAT		CODE           	0E52	0000	24
+		___CMS_CurAdjust		CODE           	029A	0000	132
+		___CMS_CheckValidTime		CODE           	0410	0000	21
+		___CMS_KeyIsIn 		CODE           	0234	0000	19
+		___CMS_KeyModeSet		CODE           	027B	0000	32
+		___CMS_KeyOpen 		CODE           	0270	0000	12
+		___CMS_Key_UNNOL_Check		CODE           	0399	0000	110
+		___CMS_KeyClearOne		CODE           	0246	0000	43
+		___CMS_CheckOnceResult		CODE           	0122	0000	257
+		___CMS_KeyHaveDown		CODE           	0222	0000	19
+		___CMS_KeyDatIIR		CODE           	031D	0000	110
+		___CMS_KeyStopClear		CODE           	038A	0000	16
+		___CMS_CurAdjMode		CODE           	0EB0	0000	67
+		___CMS_NewRAMClr		CODE           	0E69	0000	29
+		___CMS_GetTouchKeyValue		CODE           	0622	0000	178
+		___CMS_CheckTouchKey		CODE           	0024	0000	79
+
+G:\WORK\技术相关\项目程序开发\触摸库程序\触摸源程序\新触摸源程序\CMS79F72x\标准\C语言\CMS_CheckTouch_PT_79F72x_V1.01(源)\CMS_CheckTouch_PT_79F72x_V1.01.c estimated size: 1325
+

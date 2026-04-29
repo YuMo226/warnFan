@@ -1,0 +1,1 @@
+ FallDown.d  FallDown.p1:  D:/Homework/laptop/Homework/嵌入式/warmFan_finish/FallDown.c D:/Homework/laptop/Homework/嵌入式/warmFan_finish/Display.h D:/Homework/laptop/Homework/嵌入式/warmFan_finish/FallDown.h

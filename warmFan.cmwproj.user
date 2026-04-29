@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ProjectName="warmFan" RecentCompiledTime="2025/10/31 16:33:59">
+  <CompiledFiles>
+    <File name="main.c">1761899426</File>
+    <File name="Display.c">1761748631</File>
+    <File name="Display.h">1761748642</File>
+    <File name="Key.c">1761898501</File>
+    <File name="Task.c">1761898827</File>
+    <File name="Key.h">1761895026</File>
+    <File name="Task.h">1761898724</File>
+    <File name="Touch_Kscan_Library.h">1761894455</File>
+    <File name="TouchKeyConst.h">1761899512</File>
+    <File name="CMS_CheckTouch_PT_79F72x_V1.01.lpp">1594711732</File>
+  </CompiledFiles>
+</Project>

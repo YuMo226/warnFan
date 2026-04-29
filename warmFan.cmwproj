@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="1.0.0.0">
+  <PropertyGroup>
+    <OutputName>warmFan</OutputName>
+    <OutputDirectory>C:\Homework\嵌入式\warmFan</OutputDirectory>
+    <InterOutputDirectory>C:\Homework\嵌入式\warmFan\output</InterOutputDirectory>
+    <Device>CMS79F726</Device>
+    <Config>EFFF,FFEF</Config>
+    <Compiler>CMSC</Compiler>
+    <Power>0</Power>
+  </PropertyGroup>
+  <PropertyGroup Condition="'Compiler'=='CMSC'">
+    <EnableOptimization>true</EnableOptimization>
+    <EnableAssembler>true</EnableAssembler>
+    <EnableSpeed>false</EnableSpeed>
+    <EnableDebug>false</EnableDebug>
+    <EnableInitial>true</EnableInitial>
+    <WarningLevel>-9</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Filter>源文件</Filter>
+    <Filter>头文件</Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CompileItem Filter="源文件">main.c</CompileItem>
+    <CompileItem Filter="源文件">Display.c</CompileItem>
+    <CompileItem Filter="源文件">Key.c</CompileItem>
+    <CompileItem Filter="源文件">Task.c</CompileItem>
+  </ItemGroup>
+  <ItemGroup>
+    <IncludeItem Filter="头文件">Display.h</IncludeItem>
+    <IncludeItem Filter="头文件">Key.h</IncludeItem>
+    <IncludeItem Filter="头文件">Task.h</IncludeItem>
+    <IncludeItem Filter="头文件">Touch_Kscan_Library.h</IncludeItem>
+    <IncludeItem Filter="头文件">TouchKeyConst.h</IncludeItem>
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryItem>CMS_CheckTouch_PT_79F72x_V1.01.lpp</LibraryItem>
+  </ItemGroup>
+</Project>

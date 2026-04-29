@@ -1,0 +1,799 @@
+---- D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\main.c ----------------------------------------------------------------------
+1:                #include<cms.h>
+2:                #include"Display.h"
+3:                
+4:                unsigned char tcount=0;
+5:                
+6:                void interrupt ISR()
+7:                {
+8:                	if(TMR2IF)
+  001D    1C8C    SNZB	0xC,1
+  001E    2822    JP	0x22
+9:                	{
+10:               		TMR2IF=0;
+  001F    108C    CLRB	0xC,1
+11:               		tcount++;
+  0020    0AF7    INCR	0x77
+12:               		Display();    //显示相关动态扫描函数，需显示时调用
+  0021    202E    CALL	0x2E
+  0022    0876    LD	A,0x76
+  0023    1283    CLRB	0x3,5
+  0024    00FF    LD	0x7F,A
+  0025    0875    LD	A,0x75
+  0026    008A    LD	0xA,A
+  0027    0874    LD	A,0x74
+  0028    0084    LD	0x4,A
+  0029    0E73    SWAPA	0x73
+  002A    0083    LD	0x3,A
+  002B    0EFE    SWAPR	0x7E
+  002C    0E7E    SWAPA	0x7E
+  002D    0009    RETI
+13:               	}
+14:               }
+15:               
+16:               void main()
+  016D    0064    CLRWDT
+17:               {
+18:               	asm("clrwdt");
+19:               	OSCCON=0B01110001;
+  016E    3071    LDIA	0x71
+  016F    1683    SETB	0x3,5
+  0170    1303    CLRB	0x3,6
+  0171    008F    LD	0xF,A
+20:               	
+21:               	PR2=62;        //因为循环增加次数，所以时间缩短一半
+  0172    303E    LDIA	0x3E
+  0173    0092    LD	0x12,A
+22:               	TMR2IF=0;
+  0174    1283    CLRB	0x3,5
+  0175    108C    CLRB	0xC,1
+23:               	TMR2IE=1;
+  0176    1683    SETB	0x3,5
+  0177    148C    SETB	0xC,1
+24:               	T2CON=0B00000101;
+  0178    3005    LDIA	0x5
+  0179    1283    CLRB	0x3,5
+  017A    0092    LD	0x12,A
+25:               	
+26:               	InitLed();
+  017B    120A    CLRB	0xA,4
+  017C    118A    CLRB	0xA,3
+  017D    21AC    CALL	0x1AC
+27:               	
+28:               	INTCON=0B11000000;
+  0180    30C0    LDIA	0xC0
+  0181    008B    LD	0xB,A
+29:               	Dis_SC0=1;        //对3位数码管和4个功能对应显示缓冲区赋值
+  0182    3001    LDIA	0x1
+  0183    00FC    LD	0x7C,A
+30:               	Dis_SC1=6;
+  0184    3006    LDIA	0x6
+  0185    00FB    LD	0x7B,A
+31:               	SFan_off;					
+  0186    01FA    CLR	0x7A
+32:               	SSun_off;			
+  0187    01F9    CLR	0x79
+33:               	SCircle_on;		
+  0188    3001    LDIA	0x1
+  0189    00FD    LD	0x7D,A
+34:               	SH_on;		
+  018A    1283    CLRB	0x3,5
+  018B    00A2    LD	0x22,A
+35:               	SAD_on;			
+  018C    00A1    LD	0x21,A
+36:               	SWS_on;
+  018D    00A0    LD	0x20,A
+37:               	
+38:               	while(1)
+  018E    0064    CLRWDT
+39:               	{
+40:               		asm("clrwdt");
+41:               		if(tcount>=32)
+  018F    3020    LDIA	0x20
+  0190    0277    SUBA	0x77
+  0191    1C03    SNZB	0x3,0
+  0192    298E    JP	0x18E
+42:               		{
+43:               			tcount=0;
+  0193    01F7    CLR	0x77
+  0194    298E    JP	0x18E
+44:               			
+45:               		}
+46:               	}
+47:               }
+---- D:\CMS\CMS_IDE_V2.03.21\works  暖风机\Demo\Display.c ----------------------------------------------------------------------
+1:                #include<cms.h>
+2:                #include"Display.h"
+3:                
+4:                /*=============================================================
+5:                要在数码管显示内容只要对          
+6:                Dis_SC0		//左边
+7:                Dis_SC1
+8:                Dis_SC2
+9:                Dis_SC3		//右边
+10:               变量进行赋值即可。
+11:               如：
+12:               Dis_SC0 = 1; 
+13:               即可在最左边的数码管上显示数字“1”
+14:               为什么能显示“1”？取决于SegTab[]这个数组，Dis_SC0 = 1，相当于
+15:               DisplayData(SegTab[1])，最终控制的是相应的SEG段或者LED对应的IO输出0
+16:               如果要显示自己定义的内容，可以在SegTab[]后面添加元素，如果添加的元素
+17:               在数据下标的“18”的位置，那么要显示时，需要对Dis_SC0 = 18;
+18:               即可显示自己定义的内容。
+19:               ===========================================================*/
+20:               volatile unsigned char Dis_SC0;  //3位数码管和四个功能对应显示缓冲区变量
+21:               volatile unsigned char Dis_SC1;
+22:               volatile unsigned char Dis_SFan;
+23:               volatile unsigned char Dis_SSun;
+24:               volatile unsigned char Dis_SCircle;
+25:               volatile unsigned char Dis_SH;
+26:               volatile unsigned char Dis_SAD;
+27:               volatile unsigned char Dis_SWS;
+28:               
+29:               //显示的字形数组，如果需要显示表中没有的形状，可以自己在数组后面添加
+30:               const unsigned char SegTab[]={
+31:               	SMG_0,     //0x3F  
+32:               	SMG_1,     //0x06
+33:               	SMG_2,
+34:               	SMG_3,
+35:               	SMG_4,
+36:               	SMG_5,
+37:               	SMG_6,
+38:               	SMG_7,
+39:               	SMG_8,
+40:               	SMG_9,
+41:               	SMG_A,
+42:               	SMG_B,
+43:               	SMG_C,
+44:               	SMG_D,
+45:               	SMG_E,
+46:               	SMG_F,
+47:               	SMG_00,   //16
+48:               };
+49:               
+50:               //相关IO口初始化为输出
+51:               void InitLed()
+52:               {
+53:               	//相应的位与0，即设置成0，与1不会修改原来的值。
+54:               	TRISA&=0B11111111;        //设置RA0-2为输出
+  01AC    1683    SETB	0x3,5
+  01AD    0805    LD	A,0x5
+55:               	TRISB&=0B11111111;        //设置RC0-5为输出
+  01AE    0806    LD	A,0x6
+  01AF    0008    RET
+56:               
+57:               }
+58:               
+59:               /**********************************************
+60:               函数名称：DisplayData（共阴）
+61:               函数功能：数码管SEG段显示处理函数。
+62:               **********************************************/
+63:               void DisplayData(unsigned char data)
+  0084    00F0    LD	0x70,A
+64:               {
+65:               	//共阴，根据入口参数SegTab[]，判断相应位为1，点亮对应SEG段
+66:               	if(data&SIGA)
+  0085    1C70    SNZB	0x70,0
+  0086    288B    JP	0x8B
+67:               	{
+68:               		TRISA1=0;
+  0087    1683    SETB	0x3,5
+  0088    1085    CLRB	0x5,1
+69:               		SA1=1;
+  0089    1283    CLRB	0x3,5
+  008A    288C    JP	0x8C
+70:               	}
+71:               	else
+72:               	{
+73:               		TRISA1=1;
+  008B    1683    SETB	0x3,5
+  008C    1485    SETB	0x5,1
+74:               
+75:               	}
+76:               	if(data&SIGB)
+  008D    1CF0    SNZB	0x70,1
+  008E    2893    JP	0x93
+77:               	{
+78:               		TRISA2=0;
+  008F    1683    SETB	0x3,5
+  0090    1105    CLRB	0x5,2
+79:               		SB1=1;
+  0091    1283    CLRB	0x3,5
+  0092    2894    JP	0x94
+80:               	}
+81:               	else
+82:               	{
+83:               		TRISA2=1;
+  0093    1683    SETB	0x3,5
+  0094    1505    SETB	0x5,2
+84:               
+85:               	}
+86:               	if(data&SIGC)
+  0095    1D70    SNZB	0x70,2
+  0096    289B    JP	0x9B
+87:               	{
+88:               		TRISB4=0;
+  0097    1683    SETB	0x3,5
+  0098    1206    CLRB	0x6,4
+89:               		SC1=1;
+  0099    1283    CLRB	0x3,5
+  009A    289C    JP	0x9C
+90:               	}else
+91:               	{
+92:               		TRISB4=1;
+  009B    1683    SETB	0x3,5
+  009C    1606    SETB	0x6,4
+93:               
+94:               	}
+95:               	if(data&SIGD)
+  009D    1DF0    SNZB	0x70,3
+  009E    28A0    JP	0xA0
+96:               	{
+97:               		TRISB5=0;
+98:               		SD1=1;
+99:               	}else
+  009F    2968    JP	0x168
+100:              	{
+101:              		TRISB5=1;
+  00A0    1683    SETB	0x3,5
+  00A1    1686    SETB	0x6,5
+  00A2    0008    RET
+102:              
+103:              	}
+104:              }
+105:              
+106:              void DisplayData1(unsigned char data)
+  00A3    00F0    LD	0x70,A
+107:              {
+108:              	//共阴，根据入口参数SegTab[]，判断相应位为1，点亮对应SEG段
+109:              	if(data&SIGA)
+  00A4    1C70    SNZB	0x70,0
+  00A5    28AA    JP	0xAA
+110:              	{
+111:              		TRISA0=0;
+  00A6    1683    SETB	0x3,5
+  00A7    1005    CLRB	0x5,0
+112:              		SA2=1;
+  00A8    1283    CLRB	0x3,5
+  00A9    28AB    JP	0xAB
+113:              	}else
+114:              	{
+115:              		TRISA0=1;
+  00AA    1683    SETB	0x3,5
+  00AB    1405    SETB	0x5,0
+116:              	}
+117:              	if(data&SIGB)
+  00AC    1CF0    SNZB	0x70,1
+  00AD    28B2    JP	0xB2
+118:              	{
+119:              		TRISA2=0;
+  00AE    1683    SETB	0x3,5
+  00AF    1105    CLRB	0x5,2
+120:              		SB2=1;
+  00B0    1283    CLRB	0x3,5
+  00B1    28B3    JP	0xB3
+121:              	}else
+122:              	{
+123:              		TRISA2=1;
+  00B2    1683    SETB	0x3,5
+  00B3    1505    SETB	0x5,2
+124:              	}
+125:              	if(data&SIGC)
+  00B4    1D70    SNZB	0x70,2
+  00B5    28BA    JP	0xBA
+126:              	{
+127:              		TRISB4=0;
+  00B6    1683    SETB	0x3,5
+  00B7    1206    CLRB	0x6,4
+128:              		SC2=1;
+  00B8    1283    CLRB	0x3,5
+  00B9    28BB    JP	0xBB
+129:              	}else
+130:              	{
+131:              		TRISB4=1;
+  00BA    1683    SETB	0x3,5
+  00BB    1606    SETB	0x6,4
+132:              	}
+133:              	if(data&SIGD)
+  00BC    1DF0    SNZB	0x70,3
+  00BD    28BF    JP	0xBF
+134:              	{
+135:              		TRISB5=0;
+136:              		SD2=1;
+137:              	}else
+  00BE    2968    JP	0x168
+138:              	{
+139:              		TRISB5=1;
+  00BF    1683    SETB	0x3,5
+  00C0    1686    SETB	0x6,5
+  00C1    0008    RET
+140:              
+141:              	}
+142:              }
+143:              
+144:              void DisplayData2()
+145:              {
+146:              	//共阴，根据入口参数SegTab[]，判断相应位为1，点亮对应SEG段
+147:              	if(SegTab[Dis_SC0]&SIGE)
+  00C2    087C    LD	A,0x7C
+  00C3    3E01    ADDIA	0x1
+  00C4    0084    LD	0x4,A
+  00C5    120A    CLRB	0xA,4
+  00C6    118A    CLRB	0xA,3
+  00C7    2195    CALL	0x195
+  00CA    3910    ANDIA	0x10
+  00CB    1903    SZB	0x3,2
+  00CC    28D1    JP	0xD1
+148:              	{
+149:              		TRISA0=0;
+  00CD    1683    SETB	0x3,5
+  00CE    1005    CLRB	0x5,0
+150:              		SE1=1;
+  00CF    1283    CLRB	0x3,5
+  00D0    28D2    JP	0xD2
+151:              	}else
+152:              	{
+153:              		TRISA0=1;
+  00D1    1683    SETB	0x3,5
+  00D2    1405    SETB	0x5,0
+154:              
+155:              	}
+156:              	if(SegTab[Dis_SC0]&SIGF)
+  00D3    087C    LD	A,0x7C
+  00D4    3E01    ADDIA	0x1
+  00D5    0084    LD	0x4,A
+  00D6    120A    CLRB	0xA,4
+  00D7    118A    CLRB	0xA,3
+  00D8    2195    CALL	0x195
+  00DB    3920    ANDIA	0x20
+  00DC    1903    SZB	0x3,2
+  00DD    28E2    JP	0xE2
+157:              	{
+158:              		TRISA1=0;
+  00DE    1683    SETB	0x3,5
+  00DF    1085    CLRB	0x5,1
+159:              		SF1=1;
+  00E0    1283    CLRB	0x3,5
+  00E1    28E3    JP	0xE3
+160:              	}else
+161:              	{
+162:              		TRISA1=1;
+  00E2    1683    SETB	0x3,5
+  00E3    1485    SETB	0x5,1
+163:              
+164:              	}
+165:              	if(SegTab[Dis_SC0]&SIGG)
+  00E4    087C    LD	A,0x7C
+  00E5    3E01    ADDIA	0x1
+  00E6    0084    LD	0x4,A
+  00E7    120A    CLRB	0xA,4
+  00E8    118A    CLRB	0xA,3
+  00E9    2195    CALL	0x195
+  00EC    3940    ANDIA	0x40
+  00ED    1903    SZB	0x3,2
+  00EE    28F3    JP	0xF3
+166:              	{
+167:              		TRISA2=0;
+  00EF    1683    SETB	0x3,5
+  00F0    1105    CLRB	0x5,2
+168:              		SG1=1;
+  00F1    1283    CLRB	0x3,5
+  00F2    28F4    JP	0xF4
+169:              	}else
+170:              	{
+171:              		TRISA2=1;
+  00F3    1683    SETB	0x3,5
+  00F4    1505    SETB	0x5,2
+172:              
+173:              	}
+174:              	if(SegTab[Dis_SC1]&SIGE)
+  00F5    087B    LD	A,0x7B
+  00F6    3E01    ADDIA	0x1
+  00F7    0084    LD	0x4,A
+  00F8    120A    CLRB	0xA,4
+  00F9    118A    CLRB	0xA,3
+  00FA    2195    CALL	0x195
+  00FD    3910    ANDIA	0x10
+  00FE    1903    SZB	0x3,2
+  00FF    2901    JP	0x101
+175:              	{
+176:              		TRISB5=0;
+177:              		SE2=1;
+178:              	}else
+  0100    2968    JP	0x168
+179:              	{
+180:              		TRISB5=1;
+  0101    1683    SETB	0x3,5
+  0102    1686    SETB	0x6,5
+  0103    0008    RET
+181:              
+182:              	}
+183:              }
+184:              
+185:              
+186:              
+187:              /**********************************************
+188:              函数名称：DisplayFunction（共阴）
+189:              函数功能：数码管SEG段显示功能处理函数。
+190:              **********************************************/
+191:              void DisplayFunction(void)
+192:              {
+193:              	//共阴，根据入口参数SegTab[]，判断相应位为1，点亮对应SEG段
+194:              	if(Dis_SFan)
+  0104    087A    LD	A,0x7A
+  0105    1903    SZB	0x3,2
+  0106    290B    JP	0x10B
+195:              	{
+196:              		TRISA0=0;
+  0107    1683    SETB	0x3,5
+  0108    1005    CLRB	0x5,0
+197:              		SA3=1;
+  0109    1283    CLRB	0x3,5
+  010A    290C    JP	0x10C
+198:              	}else
+199:              	{
+200:              		TRISA0=1;
+  010B    1683    SETB	0x3,5
+  010C    1405    SETB	0x5,0
+201:              
+202:              	}
+203:              	if(Dis_SSun)
+  010D    0879    LD	A,0x79
+  010E    1903    SZB	0x3,2
+  010F    2914    JP	0x114
+204:              	{
+205:              		TRISA1=0;
+  0110    1683    SETB	0x3,5
+  0111    1085    CLRB	0x5,1
+206:              		SB3=1;
+  0112    1283    CLRB	0x3,5
+  0113    2915    JP	0x115
+207:              	}else
+208:              	{
+209:              		TRISA1=1;
+  0114    1683    SETB	0x3,5
+  0115    1485    SETB	0x5,1
+210:              
+211:              	}
+212:              	if(Dis_SCircle)
+  0116    087D    LD	A,0x7D
+  0117    1903    SZB	0x3,2
+  0118    291D    JP	0x11D
+213:              	{
+214:              		TRISB4=0;
+  0119    1683    SETB	0x3,5
+  011A    1206    CLRB	0x6,4
+215:              		SC3=1;
+  011B    1283    CLRB	0x3,5
+  011C    291E    JP	0x11E
+216:              	}else
+217:              	{
+218:              		TRISB4=1;
+  011D    1683    SETB	0x3,5
+  011E    1606    SETB	0x6,4
+219:              
+220:              	}
+221:              	if(Dis_SH)
+  011F    1283    CLRB	0x3,5
+  0120    0822    LD	A,0x22
+  0121    1903    SZB	0x3,2
+  0122    2924    JP	0x124
+222:              	{
+223:              		TRISB5=0;
+224:              		SD3=1;
+225:              	}else
+  0123    2968    JP	0x168
+226:              	{
+227:              		TRISB5=1;
+  0124    1683    SETB	0x3,5
+  0125    1686    SETB	0x6,5
+  0126    0008    RET
+228:              
+229:              	}
+230:              }
+231:              
+232:              void DisplayTurn(void)
+233:              {
+234:              	//共阴，根据入口参数SegTab[]，判断相应位为1，点亮对应SEG段
+235:              	if(SegTab[Dis_SC1]&SIGF)
+  0127    087B    LD	A,0x7B
+  0128    3E01    ADDIA	0x1
+  0129    0084    LD	0x4,A
+  012A    120A    CLRB	0xA,4
+  012B    118A    CLRB	0xA,3
+  012C    2195    CALL	0x195
+  012F    3920    ANDIA	0x20
+  0130    1903    SZB	0x3,2
+  0131    2936    JP	0x136
+236:              	{
+237:              		TRISA0=0;
+  0132    1683    SETB	0x3,5
+  0133    1005    CLRB	0x5,0
+238:              		SF2=1;
+  0134    1283    CLRB	0x3,5
+  0135    2937    JP	0x137
+239:              	}else
+240:              	{
+241:              		TRISA0=1;
+  0136    1683    SETB	0x3,5
+  0137    1405    SETB	0x5,0
+242:              
+243:              	}
+244:              	if(SegTab[Dis_SC1]&SIGG)
+  0138    087B    LD	A,0x7B
+  0139    3E01    ADDIA	0x1
+  013A    0084    LD	0x4,A
+  013B    120A    CLRB	0xA,4
+  013C    118A    CLRB	0xA,3
+  013D    2195    CALL	0x195
+  0140    3940    ANDIA	0x40
+  0141    1903    SZB	0x3,2
+  0142    2947    JP	0x147
+245:              	{
+246:              		TRISA1=0;
+  0143    1683    SETB	0x3,5
+  0144    1085    CLRB	0x5,1
+247:              		SG2=1;
+  0145    1283    CLRB	0x3,5
+  0146    2948    JP	0x148
+248:              	}else
+249:              	{
+250:              		TRISA1=1;
+  0147    1683    SETB	0x3,5
+  0148    1485    SETB	0x5,1
+251:              
+252:              	}
+253:              	if(Dis_SAD)
+  0149    1283    CLRB	0x3,5
+  014A    0821    LD	A,0x21
+  014B    1903    SZB	0x3,2
+  014C    2951    JP	0x151
+254:              	{
+255:              		TRISA2=0;
+  014D    1683    SETB	0x3,5
+  014E    1105    CLRB	0x5,2
+256:              		SE3=1;
+  014F    1283    CLRB	0x3,5
+  0150    2952    JP	0x152
+257:              	}else
+258:              	{
+259:              		TRISA2=1;
+  0151    1683    SETB	0x3,5
+  0152    1505    SETB	0x5,2
+260:              
+261:              	}
+262:              	if(Dis_SWS)
+  0153    1283    CLRB	0x3,5
+  0154    0820    LD	A,0x20
+  0155    1903    SZB	0x3,2
+  0156    295C    JP	0x15C
+263:              	{
+264:              		TRISB4=0;
+  0157    1683    SETB	0x3,5
+  0158    1206    CLRB	0x6,4
+265:              		SF3=1;
+  0159    1283    CLRB	0x3,5
+  015A    1606    SETB	0x6,4
+266:              	}else
+  015B    0008    RET
+267:              	{
+268:              		TRISB4=1;
+  015C    1683    SETB	0x3,5
+  015D    1606    SETB	0x6,4
+  015E    0008    RET
+269:              
+270:              	}
+271:              }
+272:              
+273:              
+274:              /***********************************************************
+275:              函数名称：DisplayComX
+276:              函数功能：数码管COM位扫描函数
+277:              备    注：循环扫描数码管COM
+278:              ***********************************************************/
+279:              void DisplayComx(unsigned char x)
+  003C    00F1    LD	0x71,A
+  003D    0064    CLRWDT
+280:              {
+281:              	asm("clrwdt");
+282:              	TRISA&=0B11111111;        //设置RA0-2为输出
+  003E    1683    SETB	0x3,5
+  003F    1303    CLRB	0x3,6
+283:              	TRISB&=0B11111111;        //设置RC0-5为输出
+284:              	RA0 = 1; RA1 = 1; RA2 = 1; RB4 = 1; RB5 = 1;
+  0040    215F    CALL	0x15F
+  0041    120A    CLRB	0xA,4
+  0042    118A    CLRB	0xA,3
+285:              	switch(x)
+  0043    2872    JP	0x72
+  0044    087C    LD	A,0x7C
+  0045    3E01    ADDIA	0x1
+  0046    0084    LD	0x4,A
+  0047    120A    CLRB	0xA,4
+  0048    118A    CLRB	0xA,3
+  0049    2195    CALL	0x195
+  004C    2084    CALL	0x84
+  004D    1283    CLRB	0x3,5
+  004E    1005    CLRB	0x5,0
+  004F    1683    SETB	0x3,5
+  0050    1005    CLRB	0x5,0
+  0051    0008    RET
+  0052    087B    LD	A,0x7B
+  0053    3E01    ADDIA	0x1
+  0054    0084    LD	0x4,A
+  0055    120A    CLRB	0xA,4
+  0056    118A    CLRB	0xA,3
+  0057    2195    CALL	0x195
+  005A    20A3    CALL	0xA3
+  005B    1283    CLRB	0x3,5
+  005C    1085    CLRB	0x5,1
+  005D    1683    SETB	0x3,5
+  005E    1085    CLRB	0x5,1
+  005F    0008    RET
+  0060    20C2    CALL	0xC2
+  0061    1283    CLRB	0x3,5
+  0062    1206    CLRB	0x6,4
+  0063    1683    SETB	0x3,5
+  0064    1206    CLRB	0x6,4
+  0065    0008    RET
+  0066    2104    CALL	0x104
+  0067    1283    CLRB	0x3,5
+  0068    1105    CLRB	0x5,2
+  0069    1683    SETB	0x3,5
+  006A    1105    CLRB	0x5,2
+  006B    0008    RET
+  006C    2127    CALL	0x127
+  006D    1283    CLRB	0x3,5
+  006E    1286    CLRB	0x6,5
+  006F    1683    SETB	0x3,5
+  0070    1286    CLRB	0x6,5
+  0071    0008    RET
+  0072    0871    LD	A,0x71
+  0073    3A00    XORIA	0x0
+  0074    1903    SZB	0x3,2
+  0075    2844    JP	0x44
+  0076    3A01    XORIA	0x1
+  0077    1903    SZB	0x3,2
+  0078    2852    JP	0x52
+  0079    3A03    XORIA	0x3
+  007A    1903    SZB	0x3,2
+  007B    2860    JP	0x60
+  007C    3A01    XORIA	0x1
+  007D    1903    SZB	0x3,2
+  007E    2866    JP	0x66
+  007F    3A07    XORIA	0x7
+  0080    1903    SZB	0x3,2
+  0081    286C    JP	0x6C
+  0082    2883    JP	0x83
+  0083    0008    RET
+286:              	{
+287:              		//如Dis_SC0 = 1 ->SegTab[1] -> 0x3f ->SIGA|SIGB|SIGC|SIGD|SIGE|SIGF
+288:              		case 0:DisplayData(SegTab[Dis_SC0]); SMG_C1=0; TRISA0=0;break;
+289:              		case 1:DisplayData1(SegTab[Dis_SC1]); SMG_C2=0;TRISA1=0; break;
+290:              		case 2:DisplayData2();  SMG_C4=0;TRISB4=0;break;
+291:              		case 3:DisplayFunction();  SMG_C3=0;TRISA2=0;break;
+292:              		case 4:DisplayTurn();  SMG_C5=0;TRISB5=0;break;
+293:              		default:break;
+294:              	}
+295:              }
+296:              
+297:              /***********************************************
+298:              函数名称：Display
+299:              函数功能：动态扫描显示程序
+300:              ************************************************/
+301:              //此函数在4MS主循环或125us中断服务程序中调用
+302:              void Display()    //循环扫描各个COM口
+303:              {
+304:              	TRISA&=0B11111111;        //设置RA0-2为输出
+  002E    1683    SETB	0x3,5
+305:              	TRISB&=0B11111111;        //设置RC0-5为输出
+306:              	
+307:              	static unsigned char Dcount;       //COM口轮流显示计数
+308:              	// 先关闭所有COM和SEG
+309:              
+310:                  
+311:                  // 重置所有SEG段输出为0
+312:                  RA0 = 1; RA1 = 1; RA2 = 1; RB4 = 1; RB5 = 1;
+  002F    215F    CALL	0x15F
+  0030    120A    CLRB	0xA,4
+  0031    118A    CLRB	0xA,3
+313:              	DisplayComx(Dcount);
+  0032    0878    LD	A,0x78
+  0033    203C    CALL	0x3C
+314:              	if(Dcount++>=5)
+  0034    0878    LD	A,0x78
+  0035    0AF8    INCR	0x78
+  0036    00F2    LD	0x72,A
+  0037    3005    LDIA	0x5
+  0038    0272    SUBA	0x72
+  0039    1803    SZB	0x3,0
+315:              		Dcount=0;
+  003A    01F8    CLR	0x78
+  003B    0008    RET
+316:              	/*
+317:              	if(Dcount == 0) {
+318:                      // 关闭所有COM
+319:                      SMG_C1 = 1; SMG_C2 = 1; SMG_C3 = 1; SMG_C4 = 1; SMG_C5 = 1;
+320:              
+321:              
+322:                      
+323:                      // 只显示第一个数码管
+324:                      DisplayData(SegTab[Dis_SC0]);
+325:                      SMG_C1 = 0;  // 开启COM1
+326:              		TRISA0=0;
+327:                  }
+328:                  
+329:                  if(++Dcount >= 1)  // 只扫描一个数码管
+330:                      Dcount = 0;
+331:              		*/
+332:              }
+---- stringtab ------------------------------------------------------------------
+  0195    3001    LDIA	0x1
+  0196    008A    LD	0xA,A
+  0197    0804    LD	A,0x4
+  0198    0A84    INCR	0x4
+  0199    0782    ADDR	0x2
+  019A    3400    RET	0x0
+---- reset_enter ------------------------------------------------------------------
+  0000    120A    CLRB	0xA,4
+  0001    118A    CLRB	0xA,3
+  0002    2812    JP	0x12
+  0012    120A    CLRB	0xA,4
+  0013    118A    CLRB	0xA,3
+  0014    2815    JP	0x15
+---- start_initialization ------------------------------------------------------------------
+  0015    01F7    CLR	0x77
+  0016    01F8    CLR	0x78
+  0017    01F9    CLR	0x79
+  0018    01FA    CLR	0x7A
+---- interrupt_function_enter ----------------------------------------------------------
+  0004    00FE    LD	0x7E,A
+  0005    0E03    SWAPA	0x3
+  0006    00F3    LD	0x73,A
+  0007    0804    LD	A,0x4
+  0008    00F4    LD	0x74,A
+  0009    080A    LD	A,0xA
+  000A    00F5    LD	0x75,A
+  000B    1283    CLRB	0x3,5
+  000C    1303    CLRB	0x3,6
+  000D    087F    LD	A,0x7F
+  000E    00F6    LD	0x76,A
+  000F    120A    CLRB	0xA,4
+  0010    118A    CLRB	0xA,3
+  0011    281D    JP	0x1D
+---- common_function ------------------------------------------------------------------
+  0019    0183    CLR	0x3
+  001A    120A    CLRB	0xA,4
+  001B    118A    CLRB	0xA,3
+  001C    296D    JP	0x16D
+  015F    0805    LD	A,0x5
+  0160    0806    LD	A,0x6
+  0161    1283    CLRB	0x3,5
+  0162    1405    SETB	0x5,0
+  0163    1485    SETB	0x5,1
+  0164    1505    SETB	0x5,2
+  0165    1606    SETB	0x6,4
+  0166    1686    SETB	0x6,5
+  0167    0008    RET
+  0168    1683    SETB	0x3,5
+  0169    1286    CLRB	0x6,5
+  016A    1283    CLRB	0x3,5
+  016B    1686    SETB	0x6,5
+  016C    0008    RET
+  019B    343F    RET	0x3F
+  019C    3406    RET	0x6
+  019D    345B    RET	0x5B
+  019E    344F    RET	0x4F
+  019F    3466    RET	0x66
+  01A0    346D    RET	0x6D
+  01A1    347D    RET	0x7D
+  01A2    3407    RET	0x7
+  01A3    347F    RET	0x7F
+  01A4    346F    RET	0x6F
+  01A5    3477    RET	0x77
+  01A6    347C    RET	0x7C
+  01A7    3458    RET	0x58
+  01A8    345E    RET	0x5E
+  01A9    3479    RET	0x79
+  01AA    3471    RET	0x71
+  01AB    3400    RET	0x0
